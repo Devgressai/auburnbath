@@ -13,14 +13,14 @@ export function ServicesOverview({
   description?: string;
 }) {
   return (
-    <section className="py-20">
+    <section className="relative py-20 sm:py-24">
       <Container>
         <SectionHeading
           eyebrow={eyebrow}
           title={title}
           description={description}
         />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (
             <ServiceCard
               key={s.key}

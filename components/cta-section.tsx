@@ -17,45 +17,73 @@ export function CTASection({
     <section
       className={
         isSage
-          ? "py-20 bg-sage-light"
-          : "py-20 bg-forest text-cream"
+          ? "relative overflow-hidden py-20 bg-sage-light sm:py-24"
+          : "relative overflow-hidden py-20 bg-forest text-cream sm:py-24"
       }
     >
-      <Container className="text-center">
+      {!isSage ? (
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_120%_at_50%_-20%,rgba(122,158,142,0.25),transparent_60%)]"
+        />
+      ) : (
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_120%_at_50%_120%,rgba(47,93,80,0.18),transparent_70%)]"
+        />
+      )}
+      <Container className="relative text-center">
+        <span
+          className={
+            "mx-auto mb-4 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] " +
+            (isSage ? "text-forest" : "text-cream/80")
+          }
+        >
+          <span
+            aria-hidden
+            className={
+              "h-px w-8 " +
+              (isSage ? "bg-forest/40" : "bg-cream/40")
+            }
+          />
+          Free quote · Local Auburn, CA
+          <span
+            aria-hidden
+            className={
+              "h-px w-8 " +
+              (isSage ? "bg-forest/40" : "bg-cream/40")
+            }
+          />
+        </span>
         <h2
           className={
             isSage
-              ? "font-display text-3xl sm:text-4xl text-soft-black"
-              : "font-display text-3xl sm:text-4xl text-cream"
+              ? "mx-auto max-w-3xl font-display text-3xl text-soft-black sm:text-[2.5rem]"
+              : "mx-auto max-w-3xl font-display text-3xl text-cream sm:text-[2.5rem]"
           }
         >
           {title}
         </h2>
         <p
           className={
-            "mx-auto mt-4 max-w-2xl text-base leading-7 sm:text-lg " +
+            "mx-auto mt-5 max-w-2xl text-base leading-7 sm:text-lg " +
             (isSage ? "text-muted" : "text-cream/85")
           }
         >
           {description}
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="/contact"
-            className={
-              isSage
-                ? "inline-flex items-center justify-center rounded-full bg-forest px-7 py-3 text-sm font-medium text-cream hover:bg-forest-dark"
-                : "inline-flex items-center justify-center rounded-full bg-cream px-7 py-3 text-sm font-medium text-forest-dark hover:bg-stone"
-            }
+            className={isSage ? "btn btn-primary" : "btn btn-on-forest"}
           >
             Get Free Quote
+            <ArrowRight />
           </Link>
           <a
             href={site.phoneHref}
             className={
-              isSage
-                ? "inline-flex items-center justify-center rounded-full border border-forest/30 px-7 py-3 text-sm font-medium text-forest hover:bg-cream"
-                : "inline-flex items-center justify-center rounded-full border border-cream/40 px-7 py-3 text-sm font-medium text-cream hover:bg-forest-dark"
+              isSage ? "btn btn-secondary" : "btn btn-on-forest-outline"
             }
           >
             Call {site.phone}
@@ -63,5 +91,25 @@ export function CTASection({
         </div>
       </Container>
     </section>
+  );
+}
+
+function ArrowRight() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      className="h-3.5 w-3.5"
+      aria-hidden
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+      />
+    </svg>
   );
 }

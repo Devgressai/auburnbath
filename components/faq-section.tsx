@@ -14,7 +14,7 @@ export function FAQSection({
   description?: string;
 }) {
   return (
-    <section className="py-20" aria-labelledby="faq-heading">
+    <section className="py-20 sm:py-24" aria-labelledby="faq-heading">
       <Container size="narrow">
         <SectionHeading
           eyebrow="FAQ"
@@ -22,17 +22,18 @@ export function FAQSection({
           description={description}
           align="center"
         />
-        <div className="mt-10 divide-y divide-line/70 rounded-[var(--radius-card)] border border-line/80 bg-cream">
-          {items.map((item) => (
+        <div className="mt-12 overflow-hidden rounded-[var(--radius-card)] border border-line/80 bg-cream divide-y divide-line/70 shadow-soft">
+          {items.map((item, idx) => (
             <details
               key={item.q}
-              className="group p-6 [&_summary::-webkit-details-marker]:hidden"
+              className="group [&_summary::-webkit-details-marker]:hidden"
+              {...(idx === 0 ? { open: true } : {})}
             >
-              <summary className="flex cursor-pointer items-start justify-between gap-6 text-base font-medium text-soft-black list-none">
+              <summary className="flex cursor-pointer items-start justify-between gap-6 list-none px-6 py-5 text-base font-medium text-soft-black hover:bg-sage-light/40 transition-colors">
                 <span>{item.q}</span>
                 <span
                   aria-hidden
-                  className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-line text-forest transition-transform group-open:rotate-45"
+                  className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-forest transition-transform group-open:rotate-45"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +51,9 @@ export function FAQSection({
                   </svg>
                 </span>
               </summary>
-              <p className="mt-3 text-sm leading-7 text-muted">{item.a}</p>
+              <div className="px-6 pb-6 text-sm leading-7 text-muted">
+                {item.a}
+              </div>
             </details>
           ))}
         </div>

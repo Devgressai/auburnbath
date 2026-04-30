@@ -13,21 +13,21 @@ export function MobileStickyCTA() {
 
   return (
     <div
-      className="fixed bottom-0 inset-x-0 z-40 lg:hidden border-t border-line/70 bg-cream/95 backdrop-blur"
+      className="fixed bottom-3 inset-x-3 z-40 lg:hidden rounded-full border border-line/70 bg-cream/95 backdrop-blur-md shadow-[0_8px_28px_rgba(17,17,17,0.12),0_2px_4px_rgba(17,17,17,0.04)]"
       role="region"
       aria-label="Quick contact"
     >
-      <div className="grid grid-cols-2 gap-2 p-3">
+      <div className="grid grid-cols-2 gap-1 p-1">
         <a
           href={site.phoneHref}
-          className="inline-flex items-center justify-center gap-2 rounded-full border border-forest/30 bg-cream px-4 py-3 text-sm font-medium text-forest"
+          className="inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-forest hover:bg-sage-light transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.8"
+            strokeWidth="1.7"
             className="h-4 w-4"
             aria-hidden
           >
@@ -41,9 +41,24 @@ export function MobileStickyCTA() {
         </a>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center rounded-full bg-forest px-4 py-3 text-sm font-medium text-cream"
+          className="inline-flex items-center justify-center gap-1.5 rounded-full bg-forest px-4 py-3 text-sm font-medium text-cream shadow-cta hover:bg-forest-dark transition-colors"
         >
           Free Quote
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            className="h-3.5 w-3.5"
+            aria-hidden
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+            />
+          </svg>
         </Link>
       </div>
     </div>
