@@ -50,7 +50,8 @@ export default function Home() {
         title="Bathroom Remodeling in Auburn, CA"
         description="Custom bathroom remodels, walk-in showers, shower upgrades, and tub-to-shower conversions built for Auburn and Placer County homes — calm, durable, and quietly premium."
         imageSlug="home-hero"
-        imageAlt="Premium Auburn, CA primary bathroom remodel with sage stone tile shower, freestanding tub, and warm wood vanity"
+        imageAlt="Bathroom remodeling in Auburn, CA — primary bathroom with sage stone tile shower, freestanding soaker tub, and rift oak vanity"
+        imageCaption="Auburn primary bath, foothill spa palette"
       />
       <TrustBar />
       <ServicesOverview />

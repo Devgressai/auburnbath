@@ -45,7 +45,7 @@ export function WhyUs() {
         </div>
         <ImagePlaceholder
           slug="home-why-us"
-          alt="Sage-toned Auburn bathroom remodel with stone-tile shower, frameless glass enclosure, and warm wood vanity"
+          alt="Auburn, CA bathroom remodel with sage stone-tile walk-in shower, frameless low-iron glass enclosure, and rift oak vanity"
           caption="Calm tones, durable materials"
           ratio="5/4"
           tone="sage"

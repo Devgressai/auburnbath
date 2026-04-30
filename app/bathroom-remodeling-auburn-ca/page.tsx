@@ -60,7 +60,8 @@ export default function Page() {
         title="Bathroom Remodeling Auburn CA"
         description="Custom bathroom remodels in Auburn, CA — full primary baths, guest bathrooms, and powder rooms designed and built with foothill homes in mind."
         imageSlug="bath-hero"
-        imageAlt="Custom bathroom remodel in Auburn CA with green-toned tile, freestanding tub, and warm wood vanity"
+        imageAlt="Custom bathroom remodel in Auburn, CA — sage-toned tile shower, freestanding tub, double rift oak vanity, and brushed brass hardware"
+        imageCaption="Custom Auburn primary bath remodel"
       />
 
       <section className="py-16">
@@ -111,7 +112,7 @@ export default function Page() {
         <Container className="grid items-center gap-10 lg:grid-cols-2">
           <ImagePlaceholder
             slug="bath-primary"
-            alt="Auburn primary bathroom remodel with sage tile shower, warm wood vanity, and matte black hardware"
+            alt="Auburn, CA primary bathroom remodel — large-format sage stone tile shower, warm wood floating vanity, matte black shower fixture"
             caption="Sage-tile primary bath, Auburn"
             ratio="5/4"
             tone="sage"

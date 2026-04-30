@@ -53,7 +53,8 @@ export default function Page() {
         title="About Auburn Bath"
         description="A local bathroom remodeling brand built around one idea: bathrooms deserve a focused approach, not the generalist treatment most contractors give them."
         imageSlug="about-hero"
-        imageAlt="Auburn Bath crew on-site in a foothill home, installing tile in a primary bathroom remodel"
+        imageAlt="Auburn Bath bathroom remodel crew installing sage stone tile in an Auburn, CA foothill home primary bathroom"
+        imageCaption="On-site, Auburn foothills"
       />
 
       <section className="py-16">
@@ -96,7 +97,7 @@ export default function Page() {
           </div>
           <ImagePlaceholder
             slug="about-crew"
-            alt="Auburn Bath crew tile setter installing sage stone tile in a foothill home bathroom"
+            alt="Auburn Bath tile setter installing large-format sage stone tile in an Auburn, CA bathroom remodel"
             ratio="3/4"
             tone="forest"
             className="lg:col-span-5"

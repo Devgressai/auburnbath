@@ -8,9 +8,8 @@ export const site = {
   city: "Auburn",
   region: "CA",
   county: "Placer County",
-  phone: "{{PHONE_NUMBER}}",
-  // Reserved 555-01XX range — guaranteed non-routable until real phone is set.
-  phoneHref: "tel:+15305550100",
+  phone: "(530) 450-2343",
+  phoneHref: "tel:+15304502343",
   // Approximate Auburn, CA city-center coordinates for LocalBusiness/geo.
   geo: { latitude: 38.8966, longitude: -121.0769 },
   email: "{{EMAIL}}",
