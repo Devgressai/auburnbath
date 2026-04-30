@@ -29,6 +29,7 @@ export default function Page() {
         eyebrow="Contact"
         title="Request a Free Bathroom Remodel Quote in Auburn, CA"
         description="Share a few details about your space and we'll follow up to schedule a free consultation. We typically respond within one business day."
+        imageSlug="contact-hero"
         imageAlt="Auburn Bath consultation moodboard with sage stone tile and warm wood vanity samples"
         primaryHref="#quote-form"
         primaryLabel="Send your details"

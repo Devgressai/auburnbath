@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "model": "pro",
+  "style_suffix": "Photorealistic interior photography. Natural daylight from a single window. Soft warm light. Sharp focus, shallow depth of field. Sage green walls and warm stone tile. Honed quartz and rift oak vanity. Frameless glass. Plants for warmth. Clean composition, no clutter. No people unless specified. No text or logos. Color palette: forest green #2F5D50, sage #7A9E8E, sand #F7F4EF, warm wood, charcoal accents.",
+  "images": [
+    {
+      "slug": "home-hero",
+      "aspect": "landscape",
+      "prompt": "A premium Auburn, California primary bathroom remodel. Centered freestanding soaker tub on warm wood plank floor with stone-look porcelain accents. Beyond the tub: a frameless walk-in shower with floor-to-ceiling sage green stone tile, gold-brushed shower fixture, and a vertical niche. Soft morning light through a large window framing oak trees and Sierra foothills. Eucalyptus branches in a vase, neatly folded white bath towels. Warm spa atmosphere."
+    },
+    {
+      "slug": "home-why-us",
+      "aspect": "landscape",
+      "prompt": "Detail interior shot of a custom Auburn bathroom: a sage green stone-tile walk-in shower with frameless low-iron glass, polished chrome rain head, and a built-in bench. Adjacent rift oak floating vanity with honed white quartz counter and matte black faucets. Window with sheer linen curtain. Calm, durable, foothill spa feel."
+    },
+    {
+      "slug": "bath-hero",
+      "aspect": "landscape",
+      "prompt": "Wide-angle photo of a fully remodeled Auburn primary bathroom. Double rift oak vanity with brushed brass hardware on a wall of warm stone tile, large frameless mirror, sage green painted accent wall. To one side, a modern walk-in shower with green-toned tile and frameless glass. Warm wood floors. A freestanding tub near a window with foothill view. Magazine-quality interior photography."
+    },
+    {
+      "slug": "bath-primary",
+      "aspect": "landscape",
+      "prompt": "Three-quarter view of a beautifully crafted Auburn primary bathroom shower. Large-format sage stone tile floor to ceiling, recessed niche with eucalyptus, frameless glass, warm wood vanity reflected in the mirror. Matte black shower fixture. Brass hardware accents. Soft morning light, calm composition."
+    },
+    {
+      "slug": "shower-hero",
+      "aspect": "landscape",
+      "prompt": "Custom walk-in tile shower in an Auburn home. Floor-to-ceiling green-toned stone porcelain. Frameless low-iron glass enclosure with brass hinges. Linear drain. Wall-mounted rain shower head in matte black. A built-in horizontal niche with bath products. Bench seat in matching stone. Warm window light from outside."
+    },
+    {
+      "slug": "shower-stone",
+      "aspect": "landscape",
+      "prompt": "Detail shot of a sage stone tile walk-in shower with a vertical niche, frameless glass panel meeting the wall cleanly, and a polished chrome thermostatic shower fixture. Soft natural light. Photorealistic, magazine quality."
+    },
+    {
+      "slug": "tub-hero",
+      "aspect": "landscape",
+      "prompt": "Auburn primary bathroom showing a tub-to-shower conversion: where an old bathtub used to sit is now a wide low-threshold walk-in shower with sage stone tile, built-in bench, and frameless glass. Warm wood vanity to the side. Calm and modern."
+    },
+    {
+      "slug": "tub-conversion",
+      "aspect": "landscape",
+      "prompt": "Close-up of a low-threshold tub-to-shower conversion in a foothill home. Sage stone tile floor pitched to a linear drain, the threshold barely raised. Frameless glass door, brass handle. Built-in stone bench with a small folded white towel. Plant in the corner."
+    },
+    {
+      "slug": "walkin-hero",
+      "aspect": "landscape",
+      "prompt": "Curbless walk-in shower in an Auburn primary bathroom. Continuous sage stone tile floor sloped to a linear drain at the back wall. Floor-to-ceiling tile. Frameless glass panel. Polished chrome rain head, hand-held wand. Warm wood floor outside the shower. Window light, plants. Spa feel."
+    },
+    {
+      "slug": "walkin-curbless",
+      "aspect": "landscape",
+      "prompt": "Detail of a frameless glass walk-in shower with linear drain, large-format sage stone tile, and a built-in horizontal niche. Brass shower fixture. Warm window light, eucalyptus, premium feel."
+    },
+    {
+      "slug": "cost-hero",
+      "aspect": "landscape",
+      "prompt": "Top-down photo of a designer's table with bathroom remodel material samples: sage green stone tile chips, large-format porcelain slab corner, honed white quartz counter sample, rift oak wood block, brushed brass and matte black faucet handles, white linen towel, blueprint corner peeking in. Soft natural daylight. Editorial styling."
+    },
+    {
+      "slug": "areas-hero",
+      "aspect": "landscape",
+      "prompt": "Wide architectural photo of a hillside Auburn, California foothill home at golden hour, oak trees and pine surrounding it, a window glimpse of a sage-toned bathroom interior visible from outside. Warm light, calm atmosphere, no people, no text."
+    },
+    {
+      "slug": "about-hero",
+      "aspect": "landscape",
+      "prompt": "Behind-the-scenes shot of a small bathroom remodel crew on site in an Auburn foothill home — a tile setter aligning a large-format sage stone tile on a walk-in shower wall, blue painters tape and tile spacers visible, clean job site, drop cloths on the floor, golden window light. Documentary-style construction photography, no recognizable faces."
+    },
+    {
+      "slug": "about-crew",
+      "aspect": "portrait",
+      "prompt": "Close detail shot of a tile setter's gloved hand pressing a large-format sage green stone tile into thinset on a wall, level and tile spacers visible. Warm window light. Documentary, photorealistic, no recognizable face. Vertical composition."
+    },
+    {
+      "slug": "contact-hero",
+      "aspect": "landscape",
+      "prompt": "Bathroom remodel design moodboard laid out on a warm wood table: sage stone tile sample, brass faucet handle, honed white quartz chip, small bottle of plant cuttings, swatch of linen, hand-drawn floor plan corner. Soft window light. Inviting, calm."
+    }
+  ]
+}

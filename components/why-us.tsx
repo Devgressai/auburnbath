@@ -44,6 +44,7 @@ export function WhyUs() {
           </ul>
         </div>
         <ImagePlaceholder
+          slug="home-why-us"
           alt="Sage-toned Auburn bathroom remodel with stone-tile shower, frameless glass enclosure, and warm wood vanity"
           caption="Calm tones, durable materials"
           ratio="5/4"

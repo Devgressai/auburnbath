@@ -32,7 +32,8 @@ export default function Page() {
         eyebrow="Service Areas"
         title="Bathroom Remodeling Service Areas Near Auburn, CA"
         description="Auburn Bath remodels bathrooms across Auburn and the surrounding Placer County and Nevada County foothill communities."
-        imageAlt="Map-style illustration of Auburn CA and nearby foothill communities served by Auburn Bath"
+        imageSlug="areas-hero"
+        imageAlt="Auburn, California foothill home at golden hour with oak trees, surrounded by Sierra foothill terrain served by Auburn Bath"
       />
 
       <section className="py-16">

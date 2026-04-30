@@ -52,6 +52,7 @@ export default function Page() {
         eyebrow="About"
         title="About Auburn Bath"
         description="A local bathroom remodeling brand built around one idea: bathrooms deserve a focused approach, not the generalist treatment most contractors give them."
+        imageSlug="about-hero"
         imageAlt="Auburn Bath crew on-site in a foothill home, installing tile in a primary bathroom remodel"
       />
 
@@ -94,6 +95,7 @@ export default function Page() {
             </p>
           </div>
           <ImagePlaceholder
+            slug="about-crew"
             alt="Auburn Bath crew tile setter installing sage stone tile in a foothill home bathroom"
             ratio="3/4"
             tone="forest"

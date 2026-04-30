@@ -9,6 +9,7 @@ export function Hero({
   title,
   description,
   trustLine = site.trustLine,
+  imageSlug,
   imageAlt = "Modern green-toned bathroom remodel in an Auburn, CA home with stone tile shower and warm wood vanity",
   imageCaption = "A calm, foothill-inspired bathroom palette",
   primaryHref = "/contact",
@@ -18,6 +19,7 @@ export function Hero({
   title: string;
   description: string;
   trustLine?: string;
+  imageSlug?: string;
   imageAlt?: string;
   imageCaption?: string;
   primaryHref?: string;
@@ -72,10 +74,13 @@ export function Hero({
         </div>
         <div className="lg:col-span-5">
           <ImagePlaceholder
+            slug={imageSlug}
             alt={imageAlt}
             caption={imageCaption}
             ratio="5/4"
             tone="forest"
+            priority
+            sizes="(min-width: 1024px) 540px, 100vw"
           />
         </div>
       </Container>

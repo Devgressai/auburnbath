@@ -54,6 +54,7 @@ export default function Page() {
         eyebrow="Shower Remodeling"
         title="Shower Remodeling Auburn CA"
         description="Custom tile showers, walk-in showers, glass enclosures, and modern waterproofing built for Auburn and Placer County homes."
+        imageSlug="shower-hero"
         imageAlt="Custom walk-in tile shower remodel in Auburn CA with frameless glass and warm sage stone"
       />
 
@@ -125,6 +126,7 @@ export default function Page() {
             </div>
           </div>
           <ImagePlaceholder
+            slug="shower-stone"
             alt="Stone tile walk-in shower with niche and frameless glass in an Auburn CA home"
             caption="Stone-tile walk-in, Auburn foothills"
             ratio="5/4"

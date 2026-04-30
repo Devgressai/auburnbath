@@ -52,6 +52,7 @@ export default function Page() {
         eyebrow="Cost Guide"
         title="Bathroom Remodeling Cost in Auburn, CA"
         description="A practical, local breakdown of what bathroom remodels actually cost in Auburn — what drives pricing, what doesn't, and how to plan a project that fits your home."
+        imageSlug="cost-hero"
         imageAlt="Layered tile, vanity, and fixture samples used in Auburn bathroom remodel pricing planning"
       />
 
