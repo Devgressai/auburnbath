@@ -898,7 +898,7 @@ export const cities: City[] = [
       "Bathroom remodels for Nevada City homes — preserving historic character while quietly improving function, waterproofing, and finish.",
     imageSlug: "areas-hero",
     imageAlt:
-      "Bathroom remodeling in Nevada City, CA — historic foothill home with oak trees and Sierra Nevada terrain, served by Auburn Bath",
+      "Bathroom remodeling in Nevada City, CA — bright modern primary bath with freestanding tub, rift oak vanity, and frameless glass walk-in shower, foothill view through window",
     intro: [
       "Nevada City is one of the most distinctive small towns in California — a gold-rush historic district with Victorian homes, mid-century cottages, and a housing stock where character is part of the deal. The bathroom remodels we do in Nevada City reflect that. Owners here usually aren't looking to erase the home's history; they want to update what's failing, modernize what's awkward, and keep what makes the house feel like Nevada City.",
       "That balance is genuinely difficult to do well. Most contractors either over-modernize (a glossy contemporary bathroom dropped into a Victorian) or under-design (no real updates, just new finishes on tired layouts). We aim for the middle: modern function, period-aware finishes, and tile work that takes the home's age seriously.",
