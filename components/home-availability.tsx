@@ -73,6 +73,16 @@ export function HomeAvailability() {
                   No obligation. Ever.
                 </span>
               </div>
+              <div className="flex items-start gap-3">
+                <CheckGold />
+                <span>
+                  <strong className="text-cream">
+                    Workmanship stand-behind.
+                  </strong>{" "}
+                  If something we installed isn&apos;t right, we come
+                  back and make it right.
+                </span>
+              </div>
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link

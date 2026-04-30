@@ -64,7 +64,7 @@ export function Hero({
             {[
               "Free in-home consultation",
               "Line-item written estimate",
-              "No pressure, no obligation",
+              "Response within 1 business day",
             ].map((item) => (
               <li key={item} className="inline-flex items-center gap-2">
                 <span

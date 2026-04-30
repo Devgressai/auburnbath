@@ -118,9 +118,9 @@ export function HomeGallery() {
               />
               <span
                 aria-hidden
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-soft-black/55 via-soft-black/0 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-soft-black/65 via-soft-black/0 to-transparent opacity-100 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100"
               />
-              <figcaption className="pointer-events-none absolute left-4 bottom-4 right-4 flex items-center gap-2 text-cream opacity-0 transition-all duration-500 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0">
+              <figcaption className="pointer-events-none absolute left-4 bottom-4 right-4 flex items-center gap-2 text-cream opacity-100 lg:opacity-0 translate-y-0 transition-all duration-500 lg:group-hover:opacity-100 lg:translate-y-1 lg:group-hover:translate-y-0">
                 <span className="h-px w-6 bg-stone-warm" aria-hidden />
                 <span className="text-[11px] font-semibold uppercase tracking-[0.18em]">
                   {tile.caption}
