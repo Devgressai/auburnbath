@@ -13,7 +13,7 @@ export const site = {
   // Approximate Auburn, CA city-center coordinates for LocalBusiness/geo.
   geo: { latitude: 38.8966, longitude: -121.0769 },
   email: "{{EMAIL}}",
-  license: "{{LICENSE_NUMBER}}",
+  license: "1125321",
   defaultDescription:
     "Auburn Bath specializes in bathroom remodeling, walk-in showers, tub-to-shower conversions, and shower remodels in Auburn, CA and the surrounding Placer County foothills. Request a free quote.",
   ga4Id: "{{GA4_ID}}",
