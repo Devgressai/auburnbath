@@ -55,6 +55,16 @@ export const metadata: Metadata = {
   verification: {
     google: site.gscVerification,
   },
+  formatDetection: { telephone: true },
+  category: "bathroom remodeling",
+};
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fafaf7" },
+    { media: "(prefers-color-scheme: dark)", color: "#23483e" },
+  ],
+  colorScheme: "light",
 };
 
 export default function RootLayout({

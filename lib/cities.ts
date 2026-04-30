@@ -45,6 +45,8 @@ export type City = {
   faqs: CityFAQ[];
   /** Top 4 services to feature on the city's "Related" tile row. */
   featuredServices?: ServiceKey[];
+  /** Slugs of 2–3 nearest sister cities, for cross-linking. */
+  nearbySlugs?: string[];
 };
 
 const FEATURED_DEFAULT: ServiceKey[] = [
@@ -113,6 +115,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["newcastle", "loomis", "meadow-vista"],
   },
   {
     slug: "lake-of-the-pines",
@@ -168,6 +171,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["meadow-vista", "colfax", "grass-valley"],
   },
   {
     slug: "meadow-vista",
@@ -223,6 +227,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["lake-of-the-pines", "colfax", "north-auburn"],
   },
   {
     slug: "newcastle",
@@ -278,6 +283,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["loomis", "penryn", "north-auburn"],
   },
   {
     slug: "colfax",
@@ -333,6 +339,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["meadow-vista", "lake-of-the-pines", "grass-valley"],
   },
   {
     slug: "loomis",
@@ -387,6 +394,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["penryn", "newcastle", "north-auburn"],
   },
   {
     slug: "penryn",
@@ -441,6 +449,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["loomis", "newcastle", "north-auburn"],
   },
   {
     slug: "grass-valley",
@@ -496,6 +505,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["nevada-city", "colfax", "meadow-vista"],
   },
   {
     slug: "nevada-city",
@@ -550,6 +560,7 @@ export const cities: City[] = [
       },
     ],
     featuredServices: FEATURED_DEFAULT,
+    nearbySlugs: ["grass-valley", "colfax", "lake-of-the-pines"],
   },
 ];
 

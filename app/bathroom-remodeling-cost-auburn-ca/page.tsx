@@ -58,6 +58,13 @@ export default function Page() {
 
       <article className="py-16">
         <Container size="narrow" className="prose-local">
+          <p className="!mb-8 inline-flex items-center gap-2 rounded-full border border-line/80 bg-cream px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] text-muted">
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-forest" />
+            <span>
+              <time dateTime="2026-04-30">Updated April 2026</time> · Local
+              pricing guide
+            </span>
+          </p>
           <p>
             Bathroom remodeling pricing in Auburn, CA is genuinely a moving
             target. The same square footage can deliver a clean, durable

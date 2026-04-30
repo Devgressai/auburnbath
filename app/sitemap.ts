@@ -3,6 +3,13 @@ import type { MetadataRoute } from "next";
 import { cities } from "@/lib/cities";
 import { site } from "@/lib/site";
 
+/**
+ * Stable per-route lastmod dates. Bump these only when the route's
+ * content actually changes — Google de-weights sitemaps that show a
+ * fresh `lastmod` on every build without real updates.
+ */
+const CONTENT_LAST_UPDATED = new Date("2026-04-30T00:00:00Z");
+
 type Route = {
   path: string;
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
@@ -85,7 +92,7 @@ const cityRoutes: Route[] = cities.map((c) => ({
 const routes: Route[] = [...baseRoutes, ...cityRoutes];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = CONTENT_LAST_UPDATED;
   return routes.map((r) => ({
     url: new URL(r.path, site.url).toString(),
     lastModified,

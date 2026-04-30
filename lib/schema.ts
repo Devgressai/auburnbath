@@ -1,5 +1,14 @@
 import { serviceAreas, services, site } from "./site";
 
+const HERO_IMAGES = [
+  "home-hero",
+  "home-why-us",
+  "bath-hero",
+  "shower-hero",
+  "tub-hero",
+  "walkin-hero",
+];
+
 const sanitize = (value: unknown) =>
   JSON.parse(JSON.stringify(value)) as unknown;
 
@@ -19,7 +28,10 @@ export function localBusinessSchema() {
     telephone: site.phone,
     email: site.email,
     description: site.defaultDescription,
-    image: `${site.url}/opengraph-image`,
+    image: [
+      `${site.url}/opengraph-image`,
+      ...HERO_IMAGES.map((slug) => `${site.url}/images/${slug}.webp`),
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Auburn",
@@ -159,6 +171,55 @@ export function breadcrumbSchema(
       name: item.name,
       item: `${site.url}${item.href}`,
     })),
+  };
+}
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    name: site.name,
+    alternateName: `${site.name} — Bathroom Remodeling Auburn CA`,
+    url: site.url,
+    description: site.defaultDescription,
+    inLanguage: "en-US",
+    publisher: { "@id": `${site.url}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${site.url}/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${site.url}/#organization`,
+    name: site.name,
+    legalName: site.parent,
+    url: site.url,
+    logo: `${site.url}/opengraph-image`,
+    image: `${site.url}/opengraph-image`,
+    description: site.defaultDescription,
+    parentOrganization: {
+      "@type": "Organization",
+      name: site.parent,
+      url: site.parentUrl,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: site.phone,
+      contactType: "customer support",
+      areaServed: "US-CA",
+      availableLanguage: ["English"],
+    },
+    sameAs: [site.parentUrl],
   };
 }
 

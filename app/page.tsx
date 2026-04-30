@@ -6,6 +6,11 @@ import { HomeOakwoodTrust } from "@/components/home-oakwood-trust";
 import { ServicesOverview } from "@/components/services-overview";
 import { TrustRibbon } from "@/components/trust-ribbon";
 import { WeSpecialize } from "@/components/we-specialize";
+import {
+  jsonLdScript,
+  organizationSchema,
+  websiteSchema,
+} from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -56,6 +61,14 @@ export default function Home() {
       <HomeCredentials />
       <HomeFaqCta items={homeFaqs} />
       <HomeOakwoodTrust />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(websiteSchema())}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(organizationSchema())}
+      />
     </>
   );
 }

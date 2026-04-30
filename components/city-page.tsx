@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { City } from "@/lib/cities";
+import { cities, type City } from "@/lib/cities";
 import {
   faqSchema,
   jsonLdScript,
@@ -171,11 +171,87 @@ export function CityPage({ city }: { city: City }) {
         </Container>
       </section>
 
-      <ServiceAreasGrid
-        eyebrow="Nearby"
-        title="Other Placer & Nevada County communities we serve."
-        description="We work across most of the Auburn-area foothills and the I-80 / Highway 49 corridor. If your town isn't listed, ask — most addresses within a reasonable drive of Auburn are a fit."
-      />
+      {city.nearbySlugs && city.nearbySlugs.length > 0 ? (
+        <section className="py-20 sm:py-24 bg-sand">
+          <Container>
+            <SectionHeading
+              eyebrow="Nearby cities"
+              title={`Other foothill communities near ${city.name}.`}
+              description="We work across most of the Auburn-area foothills and the I-80 / Highway 49 corridor — these are the closest sister cities we cover."
+            />
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {city.nearbySlugs.map((slug) => {
+                const nearby = cities.find((c) => c.slug === slug);
+                if (!nearby) return null;
+                return (
+                  <Link
+                    key={nearby.slug}
+                    href={`/${nearby.fullSlug}`}
+                    className="group card flex h-full flex-col p-6"
+                  >
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-forest">
+                      Nearby
+                    </span>
+                    <h3 className="mt-3 font-display text-lg text-soft-black">
+                      Bathroom Remodeling in {nearby.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-muted line-clamp-3">
+                      {nearby.heroDescription}
+                    </p>
+                    <span className="mt-auto pt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-forest">
+                      View {nearby.name} page
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+                        aria-hidden
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+                        />
+                      </svg>
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="mt-10 text-center">
+              <Link
+                href="/areas-we-serve"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-forest hover:text-forest-dark"
+              >
+                See all service areas
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-3 w-3"
+                  aria-hidden
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </Container>
+        </section>
+      ) : (
+        <ServiceAreasGrid
+          eyebrow="Nearby"
+          title="Other Placer & Nevada County communities we serve."
+          description="We work across most of the Auburn-area foothills and the I-80 / Highway 49 corridor. If your town isn't listed, ask — most addresses within a reasonable drive of Auburn are a fit."
+        />
+      )}
 
       <FAQSection
         items={city.faqs}
