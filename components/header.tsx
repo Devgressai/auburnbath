@@ -25,17 +25,17 @@ export function Header() {
         <Link
           href="/"
           aria-label="Auburn Bath — Home"
-          className="group flex items-center gap-2.5"
+          className="group flex shrink-0 items-center gap-2.5"
         >
           <LogoMark
             tone="light"
-            className="h-9 w-9 transition-transform group-hover:rotate-[-4deg]"
+            className="h-9 w-9 shrink-0 transition-transform group-hover:rotate-[-4deg]"
           />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-medium tracking-tight text-cream">
+            <span className="whitespace-nowrap font-display text-lg font-medium tracking-tight text-cream">
               Auburn Bath
             </span>
-            <span className="hidden xl:inline text-[10px] font-medium uppercase tracking-[0.2em] text-cream/55">
+            <span className="hidden 2xl:inline whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.2em] text-cream/55">
               Bathroom Remodeling · Auburn, CA
             </span>
           </span>

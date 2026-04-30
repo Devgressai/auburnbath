@@ -33,10 +33,10 @@ export function Hero({
         aria-hidden
         className="pointer-events-none absolute inset-x-0 -top-32 mx-auto h-[520px] max-w-5xl bg-[radial-gradient(60%_60%_at_50%_50%,rgba(122,158,142,0.18),transparent_70%)]"
       />
-      <Container className="relative grid items-center gap-12 py-16 lg:grid-cols-12 lg:gap-14 lg:py-24">
+      <Container className="relative grid items-center gap-12 py-16 lg:grid-cols-12 lg:gap-14 lg:py-28">
         <div className="lg:col-span-6 xl:col-span-7 lg:pr-4">
           {eyebrow ? <span className="eyebrow mb-5">{eyebrow}</span> : null}
-          <h1 className="font-display text-4xl leading-[1.04] text-soft-black sm:text-5xl lg:text-[clamp(3rem,5.4vw,4.25rem)]">
+          <h1 className="font-display text-[2.5rem] leading-[1.04] text-soft-black sm:text-5xl lg:text-[clamp(3.25rem,5.6vw,4.5rem)]">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:text-lg">
@@ -61,7 +61,7 @@ export function Hero({
           </div>
 
           {showTrustPillars ? (
-            <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
+            <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-4 sm:gap-x-4">
               {heroTrustPillars.map((p) => (
                 <div key={p.title} className="flex items-start gap-3">
                   <span
@@ -71,10 +71,10 @@ export function Hero({
                     <PillarIcon iconKey={p.iconKey} />
                   </span>
                   <div className="min-w-0">
-                    <div className="font-display text-sm font-medium text-soft-black leading-tight">
+                    <div className="font-display text-[13px] font-medium text-soft-black leading-tight">
                       {p.title}
                     </div>
-                    <div className="mt-0.5 text-[11px] text-muted leading-snug">
+                    <div className="mt-1 text-[11px] text-muted leading-snug">
                       {p.subtitle}
                     </div>
                   </div>
