@@ -117,7 +117,6 @@ export function Footer() {
                 {site.phone}
               </a>
             </li>
-            <li className="text-charcoal">{site.email}</li>
             <li className="text-muted">
               Auburn, {site.region} & nearby foothill communities
             </li>
