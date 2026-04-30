@@ -249,6 +249,105 @@ export default function Page() {
         </Container>
       </section>
 
+      <section className="py-16 bg-sand">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Design considerations"
+              title="What makes a walk-in shower feel as good as it looks."
+              description="Walk-in showers reward design discipline. The decisions below are the ones that separate a magazine-quality walk-in from one that almost works."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <h3>Threshold + slope choice</h3>
+            <p>
+              <strong>Curbless</strong> showers need the floor recessed
+              into the subfloor (typically 1.5–2&Prime;) so the slope to
+              the drain actually moves water. <strong>Low-threshold</strong>{" "}
+              (a tile-clad 1–2&Prime; curb) is forgiving on older floors
+              and reads modern. Slope is non-negotiable: 1/4&Prime; per
+              foot is the code minimum for linear drains; we pour 1/4 to
+              3/8&Prime; in practice. For center drains, the floor
+              slopes from four directions toward the drain, which adds
+              tile cutting complexity but works.
+            </p>
+            <h3>Drain choice and placement</h3>
+            <p>
+              <strong>Linear back-wall</strong> placement is the
+              cleanest visual — the drain reads as part of the tile
+              transition rather than a feature.{" "}
+              <strong>Linear center</strong> works in retrofits where
+              the existing drain is roughly center of the shower
+              footprint. <strong>Linear side-wall</strong> is rare but
+              right for narrow showers (under 36&Prime; deep).{" "}
+              <strong>Round center</strong> drains are the traditional
+              option — fine for smaller curbed showers, less elegant
+              for curbless.
+            </p>
+            <h3>Glass strategy</h3>
+            <p>
+              <strong>True walk-in (no door):</strong> the most-open
+              feel, requires a longer fixed panel and careful slope so
+              water doesn't escape the shower footprint.{" "}
+              <strong>Single fixed panel + walk-in entry:</strong> our
+              most-requested layout — partial glass containment without
+              a door swing. <strong>Frameless full enclosure</strong>{" "}
+              (three walls + door): traditional containment, more spray
+              control, requires more glass.{" "}
+              <strong>Sliding glass</strong> is rarely the right move
+              on new construction; we'll spec it for retrofits where
+              swing space is limited.
+            </p>
+            <h3>Tile direction and accent walls</h3>
+            <p>
+              Floor-to-ceiling tile reads as one cohesive room and is
+              our default. Wainscot tile (chair-rail height) is a
+              traditional alternative that costs less but dates faster.
+              An accent wall — behind the valve, behind the bench, or
+              behind a vertical niche — adds visual punch without
+              adding cost. Tile direction matters: vertical stacks
+              elongate; horizontal stacks widen.
+            </p>
+            <h3>Niche layout</h3>
+            <p>
+              <strong>Vertical niches</strong> (60–72&Prime; tall,
+              about 12&Prime; wide) fit between studs, hold a lot, and
+              read as architectural. <strong>Horizontal niches</strong>{" "}
+              (24–36&Prime; wide) require a header above and below but
+              read cleaner and align well with bench-height users.{" "}
+              <strong>Multiple smaller niches</strong> at varied
+              heights work for households with users of different
+              heights or for separating shower-tools from
+              skincare-tools. Every face of every niche needs membrane.
+            </p>
+            <h3>Bench design</h3>
+            <p>
+              <strong>Full-width bench</strong> (back or end wall) is
+              the most comfortable — 17&Prime; tall, 17–18&Prime; deep,
+              full width. <strong>Corner triangle</strong> benches save
+              floor space in smaller showers but limit who can use them
+              comfortably. <strong>Floating benches</strong> (cantilevered
+              from the back wall) lift visual weight and read more
+              modern but demand more careful waterproofing.{" "}
+              <strong>No bench</strong> is often the right call in
+              compact showers where floor space matters more than
+              seating.
+            </p>
+            <h3>Lighting and ventilation</h3>
+            <p>
+              Recessed shower-rated cans (<strong>IC/AT-rated</strong>,{" "}
+              <strong>IP65</strong> minimum) directly above the shower,
+              wall sconces outside the shower for layered light. The
+              exhaust fan should be sized to the room — at minimum 50
+              CFM for small bathrooms, 80+ for large primaries — and
+              must vent to the exterior, never into the attic. We add
+              a humidity-sensing switch on most builds so the fan
+              actually runs after a hot shower.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading

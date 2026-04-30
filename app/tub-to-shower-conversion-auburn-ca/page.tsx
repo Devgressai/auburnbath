@@ -296,6 +296,96 @@ export default function Page() {
         </Container>
       </section>
 
+      <section className="py-16 bg-sand">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Design considerations"
+              title="Decisions that make a conversion feel intentional."
+              description="A conversion can either look like the bathroom was always going to have a walk-in shower, or it can read as a retrofit. The difference is in the details below."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <h3>Threshold style</h3>
+            <p>
+              <strong>Curbless</strong> is the cleanest visual — the
+              shower floor is continuous with the bathroom floor, sloped
+              to a linear drain. It's the right call for accessibility
+              and for primary baths where the bathroom is large enough
+              to absorb the recessed subfloor work.{" "}
+              <strong>Low-threshold</strong> (a 1–2&Prime; tile-clad
+              curb) is more forgiving on older subfloors and reads
+              modern without the structural complexity. We almost never
+              recommend a traditional 4–6&Prime; curb on a new
+              conversion — it dates the project immediately.
+            </p>
+            <h3>Footprint decisions</h3>
+            <p>
+              The simplest conversion stays inside the original tub
+              footprint. The most-requested in Auburn primary baths
+              extends the shower a foot or two into the room, which
+              earns space for a built-in bench and a more generous
+              showering experience. The most ambitious is the wet-room
+              conversion — the shower opens directly into the rest of
+              the bathroom with no door at all, requiring the most
+              careful waterproofing. We talk through all three at
+              consultation.
+            </p>
+            <h3>Drain placement</h3>
+            <p>
+              Linear back-wall drains (against the back tile wall) are
+              the cleanest visual — the drain virtually disappears.
+              Linear center drains are easier on a retrofit because they
+              hit the existing tub drain location; less elegant
+              visually, just as functional. Round center drains are the
+              traditional option, fine in a curbed shower; rarely the
+              right call in a curbless or low-threshold build because
+              they require a four-way slope.
+            </p>
+            <h3>Niche placement after conversion</h3>
+            <p>
+              Conversions open up new niche locations because the wall
+              that held the tub fixtures is now usable. We typically
+              place the primary niche on the wall opposite the
+              showerhead, at chest-to-shoulder height, sized 12×24 or
+              24×24 to align with tile modules. A small secondary niche
+              for body wash or razor at lower height works well in
+              showers with a bench.
+            </p>
+            <h3>Bench sizing + placement</h3>
+            <p>
+              An end-of-shower bench is the most practical — 17&Prime;
+              tall, 17–18&Prime; deep, and the full width of the shower
+              if the layout allows. Floating benches (cantilevered off
+              the back wall) read more modern but require careful
+              waterproofing detailing. In smaller conversions where a
+              bench would crowd the shower, we recommend skipping it
+              entirely.
+            </p>
+            <h3>Glass design</h3>
+            <p>
+              The full-enclosure (three walls + door) layout contains
+              spray and reads traditional. The single-panel + walk-in
+              entry layout (one fixed glass panel, no door) reads modern
+              and feels more open — but requires careful slope and a
+              taller fixed panel to keep water in the shower. Frameless
+              3/8&Prime; or 1/2&Prime; low-iron glass either way; we
+              avoid framed enclosures, which date a conversion.
+            </p>
+            <h3>Style continuity with the rest of the bathroom</h3>
+            <p>
+              A conversion is the right time to either match the
+              existing bathroom's voice (so the new shower feels
+              original) or reset it (when the rest of the bathroom is
+              also dated and the homeowner is open to updating it
+              later). What's worse than either: an abrupt finish break
+              at the threshold — sage stone shower meeting beige
+              builder tile floor reads as a retrofit.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading

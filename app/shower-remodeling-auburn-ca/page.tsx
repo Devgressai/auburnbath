@@ -248,6 +248,88 @@ export default function Page() {
         </Container>
       </section>
 
+      <section className="py-16 bg-sand">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Design considerations"
+              title="The decisions that make a shower feel finished."
+              description="The bathroom you can't see decides whether the bathroom you can see lasts. The decisions on this page are the ones we walk through with every Auburn homeowner during design — the small choices that compound into a finished feel."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <h3>Style direction</h3>
+            <p>
+              Most Auburn shower remodels we deliver land in one of four
+              styles: <strong>modern foothill spa</strong> (large-format
+              stone-look porcelain, frameless glass, brushed brass),{" "}
+              <strong>transitional warm-modern</strong> (stone tile with
+              warm wood vanity nearby, mixed metals),{" "}
+              <strong>heritage / period-respecting</strong> (small-format
+              hand-glazed tile, brass fixtures, soft glass), or{" "}
+              <strong>clean contemporary</strong> (a single accent wall,
+              minimal hardware, restrained palette). Picking the
+              direction up front simplifies every selection that follows.
+            </p>
+            <h3>Tile layout + direction</h3>
+            <p>
+              Stack-bond reads modern; running-bond reads traditional.
+              Vertical stacks visually elongate the wall (good for
+              shorter ceilings); horizontal stacks read wider. Large-
+              format porcelain (60×120 cm) reduces grout lines but
+              requires precise wall framing — small variances become
+              visible. We sample tile in the actual shower light before
+              we commit to a layout.
+            </p>
+            <h3>Niche placement + sizing</h3>
+            <p>
+              The classic spot is the wall opposite the shower head, at
+              roughly chest height. The cleaner spot is on the side wall
+              near where you actually shampoo — closer to the body, less
+              competing with the head spray visually. Vertical niches fit
+              between studs without reframing; horizontal niches usually
+              require a header but read cleaner. Standard niche sizes
+              are 12×24 or 24×24 — both align well with 12×24 tile
+              modules. Every face of the niche needs back-pan
+              waterproofing — it's a five-sided box.
+            </p>
+            <h3>Bench sizing</h3>
+            <p>
+              A full-wall bench is typically 17&Prime; off the floor
+              (chair height), 17–18&Prime; deep, and the full width of
+              the shower. A small floating bench (18–24&Prime; wide,
+              14&Prime; deep) is enough for shaving and steadying. In
+              smaller showers, no bench is often the right answer — the
+              extra floor space changes how the shower feels in use.
+              Bench framing must be fully waterproofed; we treat it as
+              an extension of the wall membrane.
+            </p>
+            <h3>Glass-to-tile detailing</h3>
+            <p>
+              Schluter trim, mitered tile edges, or bullnose — choose
+              one detail and use it consistently. Hinges are best top +
+              bottom only; a third middle hinge reads cluttered and
+              isn't structurally needed for spans under 36&Prime;.
+              Where the door panel meets a tile corner, we plan the
+              swing direction during design so the open door doesn't
+              hit a vanity drawer or the shower head. A clear silicone
+              bead seals the vertical glass-to-tile transition.
+            </p>
+            <h3>Shower head choice</h3>
+            <p>
+              Rain head only is the cleanest option for smaller showers.
+              Slide-bar handheld is the most family-friendly. Both
+              together (rain + slide bar) is the most flexible but needs
+              a thermostatic valve so the temperature stays steady when
+              switching between them. Multiple wall heads are only worth
+              it in larger showers with the plumbing to support them —
+              and septic-aware flow rates if the home is on a septic
+              system.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading
