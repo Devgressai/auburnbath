@@ -1,8 +1,8 @@
-import { Hero } from "@/components/hero";
 import { HomeAvailability } from "@/components/home-availability";
 import { HomeCredentials } from "@/components/home-credentials";
 import { HomeFaqCta } from "@/components/home-faq-cta";
 import { HomeGallery } from "@/components/home-gallery";
+import { HomeHero } from "@/components/home-hero";
 import { HomeHow } from "@/components/home-how";
 import { HomeInfoRow } from "@/components/home-info-row";
 import { HomeOakwoodTrust } from "@/components/home-oakwood-trust";
@@ -62,14 +62,7 @@ const homeFaqs = [
 export default function Home() {
   return (
     <>
-      <Hero
-        eyebrow="Bathroom Remodeling Specialists · Auburn, CA"
-        title="Bathroom Remodeling in Auburn, CA"
-        description="Custom bathroom remodels, walk-in showers, and tub-to-shower conversions for Auburn and Placer County homes — calm, durable, and quietly premium."
-        imageSlug="home-hero"
-        imageAlt="Bathroom remodeling in Auburn, CA — primary bathroom with sage stone tile shower, freestanding soaker tub, and rift oak vanity"
-        showConsultCard
-      />
+      <HomeHero />
       <TrustRibbon />
       <HomeHow />
       <HomeGallery />
