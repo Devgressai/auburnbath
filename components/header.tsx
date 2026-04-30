@@ -25,18 +25,27 @@ export function Header() {
         <Link
           href="/"
           aria-label="Auburn Bath — Home"
-          className="group flex shrink-0 items-center gap-2.5"
+          className="group flex shrink-0 items-center gap-3"
         >
           <LogoMark
             tone="light"
-            className="h-9 w-9 shrink-0 transition-transform group-hover:rotate-[-4deg]"
+            className="h-10 w-10 shrink-0 transition-transform duration-500 group-hover:-translate-y-[1px] group-hover:scale-[1.05]"
+          />
+          <span
+            aria-hidden
+            className="hidden h-7 w-px bg-gradient-to-b from-cream/0 via-cream/25 to-cream/0 sm:block"
           />
           <span className="flex flex-col leading-none">
-            <span className="whitespace-nowrap font-display text-lg font-medium tracking-tight text-cream">
+            <span className="whitespace-nowrap font-display text-[1.18rem] font-medium tracking-[-0.012em] text-cream">
               Auburn Bath
             </span>
-            <span className="hidden 2xl:inline whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.2em] text-cream/55">
-              Bathroom Remodeling · Auburn, CA
+            <span className="mt-1 hidden items-center gap-1.5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/55 2xl:inline-flex">
+              <span className="text-cream/80">Bathroom Remodeling</span>
+              <span
+                aria-hidden
+                className="inline-block h-1 w-1 rounded-full bg-stone-warm"
+              />
+              <span>Auburn, CA</span>
             </span>
           </span>
         </Link>
@@ -115,9 +124,13 @@ export function Header() {
       {open ? (
         <div className="lg:hidden fixed inset-0 z-50 flex flex-col bg-forest-dark text-cream">
           <div className="flex h-16 items-center justify-between border-b border-cream/15 px-5">
-            <div className="flex items-center gap-2.5">
-              <LogoMark tone="light" className="h-9 w-9" />
-              <span className="font-display text-lg font-medium tracking-tight text-cream">
+            <div className="flex items-center gap-3">
+              <LogoMark tone="light" className="h-10 w-10" />
+              <span
+                aria-hidden
+                className="h-6 w-px bg-cream/25"
+              />
+              <span className="font-display text-[1.18rem] font-medium tracking-[-0.012em] text-cream">
                 Auburn Bath
               </span>
             </div>
