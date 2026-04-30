@@ -7,7 +7,15 @@ import { SectionHeading } from "./section-heading";
 
 export function ServicesOverview() {
   return (
-    <section className="relative py-20 sm:py-24 bg-sand">
+    <section className="relative py-20 sm:py-28 bg-sage-light/45">
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sage/45 to-transparent"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-sage/40 to-transparent"
+      />
       <Container>
         <SectionHeading
           eyebrow="What we remodel"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { heroTrustPillars, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import { Container } from "./container";
 import { ImagePlaceholder } from "./image-placeholder";
 
@@ -60,36 +60,27 @@ export function Hero({
             </a>
           </div>
 
-          {showTrustPillars ? (
-            <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-4 sm:gap-x-4">
-              {heroTrustPillars.map((p) => (
-                <div key={p.title} className="flex items-start gap-3">
+          <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs text-muted">
+            {site.trustLine.split("|").map((piece, idx) => (
+              <span key={idx} className="inline-flex items-center gap-2">
+                {idx > 0 ? (
                   <span
                     aria-hidden
-                    className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage-light text-forest ring-1 ring-sage/30"
-                  >
-                    <PillarIcon iconKey={p.iconKey} />
-                  </span>
-                  <div className="min-w-0">
-                    <div className="font-display text-[13px] font-medium text-soft-black leading-tight">
-                      {p.title}
-                    </div>
-                    <div className="mt-1 text-[11px] text-muted leading-snug">
-                      {p.subtitle}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="mt-7 max-w-lg text-xs leading-5 text-muted">
-              {site.trustLine}
-            </p>
-          )}
+                    className="h-1 w-1 rounded-full bg-sage/70"
+                  />
+                ) : null}
+                <span className="leading-5">{piece.trim()}</span>
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="lg:col-span-6 xl:col-span-5">
           <div className="relative">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -inset-4 -z-10 rounded-[calc(var(--radius-card)+1rem)] bg-gradient-to-br from-sage/12 via-transparent to-stone-warm/10 blur-2xl"
+            />
             <ImagePlaceholder
               slug={imageSlug}
               alt={imageAlt}
@@ -97,6 +88,7 @@ export function Hero({
               tone="forest"
               priority
               sizes="(min-width: 1024px) 600px, 100vw"
+              className="shadow-[var(--shadow-image)]"
             />
             {showConsultCard ? (
               <div className="pointer-events-auto absolute -bottom-6 left-6 right-6 sm:left-auto sm:right-6 sm:max-w-[280px] rounded-2xl bg-forest/96 p-5 text-cream shadow-lift backdrop-blur lg:-bottom-8 lg:right-8">
@@ -188,62 +180,3 @@ function CalendarIcon() {
   );
 }
 
-function PillarIcon({ iconKey }: { iconKey: string }) {
-  const common = {
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 24 24",
-    fill: "none" as const,
-    stroke: "currentColor",
-    strokeWidth: 1.5,
-    className: "h-5 w-5",
-    "aria-hidden": true as const,
-  };
-  switch (iconKey) {
-    case "specialty":
-      return (
-        <svg {...common}>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 5.25h16.5v6.75H3.75zM3.75 12h16.5v6.75H3.75zM7.5 5.25v13.5M16.5 5.25v13.5"
-          />
-        </svg>
-      );
-    case "license":
-      return (
-        <svg {...common}>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-          />
-        </svg>
-      );
-    case "parent":
-      return (
-        <svg {...common}>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.25 21V8.25m0 0L12 3l9.75 5.25M2.25 8.25l9.75 5.25 9.75-5.25M21.75 8.25V21M9.75 21V13.5h4.5V21"
-          />
-        </svg>
-      );
-    case "foothill":
-    default:
-      return (
-        <svg {...common}>
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3 19.5 9 11l4 4 3-4 5 8.5"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3 19.5h18"
-          />
-        </svg>
-      );
-  }
-}

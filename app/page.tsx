@@ -4,6 +4,7 @@ import { HomeFaqCta } from "@/components/home-faq-cta";
 import { HomeInfoRow } from "@/components/home-info-row";
 import { HomeOakwoodTrust } from "@/components/home-oakwood-trust";
 import { ServicesOverview } from "@/components/services-overview";
+import { TrustRibbon } from "@/components/trust-ribbon";
 import { WeSpecialize } from "@/components/we-specialize";
 import { buildMetadata } from "@/lib/seo";
 
@@ -46,9 +47,9 @@ export default function Home() {
         description="Custom bathroom remodels, walk-in showers, shower upgrades, and tub-to-shower conversions built for Auburn and Placer County homes — calm, durable, and quietly premium."
         imageSlug="home-hero"
         imageAlt="Bathroom remodeling in Auburn, CA — primary bathroom with sage stone tile shower, freestanding soaker tub, and rift oak vanity"
-        showTrustPillars
         showConsultCard
       />
+      <TrustRibbon />
       <WeSpecialize />
       <ServicesOverview />
       <HomeInfoRow />
