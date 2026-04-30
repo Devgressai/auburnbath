@@ -80,6 +80,39 @@ export default function Page() {
             </div>
             <div className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6">
               <h2 className="font-display text-xl text-soft-black">
+                Office
+              </h2>
+              <address className="mt-2 not-italic text-sm leading-6 text-charcoal">
+                {site.streetAddress}
+                <br />
+                {site.city}, {site.region} {site.postalCode}
+              </address>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.fullAddress)}`}
+                target="_blank"
+                rel="noopener"
+                className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-forest hover:text-forest-dark"
+              >
+                Open in Google Maps
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-3 w-3"
+                  aria-hidden
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6">
+              <h2 className="font-display text-xl text-soft-black">
                 Service area
               </h2>
               <p className="mt-2 text-sm leading-6 text-muted">

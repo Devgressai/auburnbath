@@ -34,8 +34,10 @@ export function localBusinessSchema() {
     ],
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Auburn",
-      addressRegion: "CA",
+      streetAddress: site.streetAddress,
+      addressLocality: site.city,
+      addressRegion: site.region,
+      postalCode: site.postalCode,
       addressCountry: "US",
     },
     geo: {

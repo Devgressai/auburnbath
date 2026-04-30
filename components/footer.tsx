@@ -125,8 +125,40 @@ export function Footer() {
                 {site.phone}
               </a>
             </li>
+            <li className="flex items-start gap-2 text-charcoal">
+              <span
+                aria-hidden
+                className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sage-light text-forest"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="h-3.5 w-3.5"
+                  aria-hidden
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0 1 15 0Z"
+                  />
+                </svg>
+              </span>
+              <address className="not-italic leading-snug">
+                {site.streetAddress}
+                <br />
+                {site.city}, {site.region} {site.postalCode}
+              </address>
+            </li>
             <li className="text-muted">
-              Auburn, {site.region} & nearby foothill communities
+              Serving Auburn & nearby foothill communities
             </li>
           </ul>
           <Link href="/contact" className="btn btn-primary mt-6">

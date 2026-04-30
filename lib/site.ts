@@ -9,6 +9,10 @@ export const site = {
   city: "Auburn",
   region: "CA",
   county: "Placer County",
+  streetAddress: "11641 Blocker Dr",
+  postalCode: "95603",
+  /** Single-line address for body copy + structured data fallback. */
+  fullAddress: "11641 Blocker Dr, Auburn, CA 95603",
   phone: "(530) 450-2343",
   phoneHref: "tel:+15304502343",
   // Approximate Auburn, CA city-center coordinates for LocalBusiness/geo.
