@@ -39,7 +39,7 @@ export function HomeInfoRow() {
             on-site walkthrough.
           </p>
           <Link
-            href="/bathroom-remodeling-cost-auburn-ca"
+            href="/services/cost-guide"
             className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-forest hover:text-forest-dark"
           >
             See full cost guide

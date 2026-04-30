@@ -11,7 +11,7 @@ import { ServiceAreasGrid } from "@/components/service-areas";
 import { jsonLdScript, serviceSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
-const PATH = "/shower-remodeling-auburn-ca";
+const PATH = "/services/shower-remodeling";
 
 export const metadata = buildMetadata({
   title: "Shower Remodeling Auburn CA | Custom Walk-In Showers",
@@ -46,7 +46,8 @@ export default function Page() {
         <Breadcrumbs
           trail={[
             { name: "Home", href: "/" },
-            { name: "Shower Remodeling Auburn CA", href: PATH },
+            { name: "Services", href: "/services" },
+            { name: "Shower Remodeling", href: PATH },
           ]}
         />
       </Container>
@@ -338,7 +339,7 @@ export default function Page() {
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/walk-in-showers-auburn-ca"
+              href="/services/walk-in-showers"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -349,7 +350,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/tub-to-shower-conversion-auburn-ca"
+              href="/services/tub-to-shower"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -360,7 +361,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/bathroom-remodeling-auburn-ca"
+              href="/services/bathroom-remodeling"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">

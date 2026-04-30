@@ -50,7 +50,7 @@ export function HomeStatement() {
             </svg>
           </Link>
           <Link
-            href="/bathroom-remodeling-auburn-ca"
+            href="/services/bathroom-remodeling"
             className="btn btn-secondary"
           >
             See how we build

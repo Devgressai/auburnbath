@@ -65,7 +65,7 @@ export function Footer() {
             ))}
             <li>
               <Link
-                href="/bathroom-remodeling-cost-auburn-ca"
+                href="/services/cost-guide"
                 className="text-charcoal hover:text-forest transition-colors"
               >
                 Cost Guide
@@ -190,6 +190,12 @@ export function Footer() {
               className="hover:text-forest transition-colors"
             >
               About
+            </Link>
+            <Link
+              href="/projects"
+              className="hover:text-forest transition-colors"
+            >
+              Projects
             </Link>
             <Link
               href="/blog"

@@ -336,7 +336,7 @@ export const post: BlogPost = {
         <Link href="/contact">request a free in-home consultation</Link>
         . We&apos;ll walk through your bathroom, measure, and write you
         a project schedule before any commitment. Or browse our{" "}
-        <Link href="/bathroom-remodeling-cost-auburn-ca">
+        <Link href="/services/cost-guide">
           Auburn bathroom remodel cost guide
         </Link>{" "}
         for the budgeting side of the same picture.

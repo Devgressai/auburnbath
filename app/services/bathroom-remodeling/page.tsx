@@ -14,7 +14,7 @@ import { findPost } from "@/lib/blog";
 import { jsonLdScript, serviceSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
-const PATH = "/bathroom-remodeling-auburn-ca";
+const PATH = "/services/bathroom-remodeling";
 
 export const metadata = buildMetadata({
   title: "Bathroom Remodeling Auburn CA | Local Bathroom Remodel Contractor",
@@ -53,7 +53,8 @@ export default function Page() {
         <Breadcrumbs
           trail={[
             { name: "Home", href: "/" },
-            { name: "Bathroom Remodeling Auburn CA", href: PATH },
+            { name: "Services", href: "/services" },
+            { name: "Bathroom Remodeling", href: PATH },
           ]}
         />
       </Container>
@@ -358,7 +359,7 @@ export default function Page() {
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/shower-remodeling-auburn-ca"
+              href="/services/shower-remodeling"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -369,7 +370,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/tub-to-shower-conversion-auburn-ca"
+              href="/services/tub-to-shower"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -380,7 +381,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/bathroom-remodeling-cost-auburn-ca"
+              href="/services/cost-guide"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">

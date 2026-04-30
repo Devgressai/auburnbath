@@ -61,17 +61,17 @@ export default function Page() {
           <div className="prose-local lg:col-span-7">
             <p>
               Auburn Bath focuses exclusively on{" "}
-              <Link href="/bathroom-remodeling-auburn-ca">
+              <Link href="/services/bathroom-remodeling">
                 bathroom remodeling
               </Link>
               ,{" "}
-              <Link href="/shower-remodeling-auburn-ca">
+              <Link href="/services/shower-remodeling">
                 shower remodeling
               </Link>
               ,{" "}
-              <Link href="/walk-in-showers-auburn-ca">walk-in showers</Link>,
+              <Link href="/services/walk-in-showers">walk-in showers</Link>,
               and{" "}
-              <Link href="/tub-to-shower-conversion-auburn-ca">
+              <Link href="/services/tub-to-shower">
                 tub-to-shower conversions
               </Link>{" "}
               for Auburn and nearby Placer County homeowners. We exist

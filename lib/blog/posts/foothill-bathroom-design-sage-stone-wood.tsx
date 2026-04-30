@@ -327,11 +327,11 @@ export const post: BlogPost = {
       <p>
         For a closer look at what we build with this palette in mind,
         see our{" "}
-        <Link href="/bathroom-remodeling-auburn-ca">
+        <Link href="/services/bathroom-remodeling">
           bathroom remodeling
         </Link>{" "}
         and{" "}
-        <Link href="/walk-in-showers-auburn-ca">walk-in shower</Link>{" "}
+        <Link href="/services/walk-in-showers">walk-in shower</Link>{" "}
         service pages, or the{" "}
         <Link href="/blog/curbless-vs-low-threshold-walk-in-shower">
           curbless vs low-threshold guide

@@ -67,25 +67,25 @@ export default function Page() {
           </p>
           <ul>
             <li>
-              <Link href="/bathroom-remodeling-auburn-ca">
+              <Link href="/services/bathroom-remodeling">
                 bathroom remodeling
               </Link>{" "}
               — full primary, guest, and powder room remodels;
             </li>
             <li>
-              <Link href="/shower-remodeling-auburn-ca">
+              <Link href="/services/shower-remodeling">
                 shower remodeling
               </Link>{" "}
               — custom tile showers, frameless glass, niches, and
               durable waterproofing;
             </li>
             <li>
-              <Link href="/walk-in-showers-auburn-ca">walk-in showers</Link>{" "}
+              <Link href="/services/walk-in-showers">walk-in showers</Link>{" "}
               — curbless and low-threshold designs with linear drains and
               built-in benches;
             </li>
             <li>
-              <Link href="/tub-to-shower-conversion-auburn-ca">
+              <Link href="/services/tub-to-shower">
                 tub-to-shower conversions
               </Link>{" "}
               — replacing unused or outdated tubs with modern walk-in

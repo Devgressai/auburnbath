@@ -103,7 +103,7 @@ export const post: BlogPost = {
       <p>
         For Auburn homeowners in their 50s and beyond who plan to stay
         in the home long-term, a properly-designed{" "}
-        <Link href="/walk-in-showers-auburn-ca">walk-in shower</Link>{" "}
+        <Link href="/services/walk-in-showers">walk-in shower</Link>{" "}
         — especially curbless or low-threshold — is a feature that
         actively helps resale to other buyers in the same age bracket.
         Around half of Auburn-area buyers we see end up being
@@ -241,7 +241,7 @@ export const post: BlogPost = {
       <h2>What this looks like in dollars</h2>
       <p>
         For ballpark numbers, see our{" "}
-        <Link href="/bathroom-remodeling-cost-auburn-ca">
+        <Link href="/services/cost-guide">
           Auburn bathroom remodel cost guide
         </Link>
         . Tub-to-shower conversions typically run lower than full

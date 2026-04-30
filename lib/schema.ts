@@ -86,8 +86,26 @@ export function localBusinessSchema() {
       value: site.license,
     },
     knowsAbout: services.map((s) => s.title),
-    priceRange: "$$",
-    sameAs: [],
+    /**
+     * Premium-tier positioning. "$$$" reflects high-end custom
+     * bathroom remodeling pricing in the Auburn market — our typical
+     * full primary-bath rebuild sits well above the local median.
+     */
+    priceRange: "$$$",
+    /**
+     * Social profiles for entity disambiguation. Populated as we
+     * publish each one. Order doesn't matter to Google, but we list
+     * the highest-trust profile first.
+     *
+     * TODO: populate with real URLs once each profile is live:
+     * - Google Business Profile share URL
+     * - Yelp listing
+     * - Better Business Bureau
+     * - Houzz profile
+     * - Facebook page
+     * - Instagram profile
+     */
+    sameAs: [] as string[],
   };
 }
 

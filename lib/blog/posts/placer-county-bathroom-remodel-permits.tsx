@@ -371,7 +371,7 @@ export const post: BlogPost = {
         <Link href="/contact">request a free consultation</Link> — we
         come to you, look at the work, and walk through the permitting
         path with you before any commitment. Or read our{" "}
-        <Link href="/bathroom-remodeling-cost-auburn-ca">
+        <Link href="/services/cost-guide">
           cost guide
         </Link>{" "}
         for the budget context.

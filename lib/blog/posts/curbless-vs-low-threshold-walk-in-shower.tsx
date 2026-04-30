@@ -295,9 +295,9 @@ export const post: BlogPost = {
         <Link href="/contact">request a free consultation</Link>. We
         come to you, look at the space, and walk through both options
         with the bathroom in front of us. Or read our service pages on{" "}
-        <Link href="/walk-in-showers-auburn-ca">walk-in showers</Link>{" "}
+        <Link href="/services/walk-in-showers">walk-in showers</Link>{" "}
         and{" "}
-        <Link href="/tub-to-shower-conversion-auburn-ca">
+        <Link href="/services/tub-to-shower">
           tub-to-shower conversions
         </Link>{" "}
         for more on what we build.

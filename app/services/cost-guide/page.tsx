@@ -11,7 +11,7 @@ import { findPost } from "@/lib/blog";
 import { articleSchema, jsonLdScript } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
-const PATH = "/bathroom-remodeling-cost-auburn-ca";
+const PATH = "/services/cost-guide";
 
 export const metadata = buildMetadata({
   title: "Bathroom Remodeling Cost Auburn CA | 2026 Local Pricing Guide",
@@ -46,7 +46,8 @@ export default function Page() {
         <Breadcrumbs
           trail={[
             { name: "Home", href: "/" },
-            { name: "Bathroom Remodeling Cost Auburn CA", href: PATH },
+            { name: "Services", href: "/services" },
+            { name: "Cost Guide", href: PATH },
           ]}
         />
       </Container>
@@ -188,7 +189,7 @@ export default function Page() {
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link
-              href="/bathroom-remodeling-auburn-ca"
+              href="/services/bathroom-remodeling"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -199,7 +200,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/shower-remodeling-auburn-ca"
+              href="/services/shower-remodeling"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -210,7 +211,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/tub-to-shower-conversion-auburn-ca"
+              href="/services/tub-to-shower"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">
@@ -221,7 +222,7 @@ export default function Page() {
               </p>
             </Link>
             <Link
-              href="/walk-in-showers-auburn-ca"
+              href="/services/walk-in-showers"
               className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 hover:border-forest/40"
             >
               <span className="font-display text-lg text-soft-black">

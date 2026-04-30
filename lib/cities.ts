@@ -1,6 +1,6 @@
 /**
  * Rich, hand-written content for each non-Auburn service-area city.
- * Auburn proper lives on the main /bathroom-remodeling-auburn-ca service
+ * Auburn proper lives on the main /services/bathroom-remodeling service
  * page — these pages cover the surrounding foothill towns.
  *
  * Each entry deliberately includes city-specific notes (housing stock,
@@ -78,7 +78,7 @@ export const cities: City[] = [
   {
     slug: "north-auburn",
     name: "North Auburn",
-    fullSlug: "bathroom-remodeling-north-auburn-ca",
+    fullSlug: "services/bathroom-remodeling/north-auburn",
     h1: "Bathroom Remodeling in North Auburn, CA",
     metaTitle: "Bathroom Remodeling North Auburn CA | Auburn Bath",
     metaDescription:
@@ -183,7 +183,7 @@ export const cities: City[] = [
   {
     slug: "lake-of-the-pines",
     name: "Lake of the Pines",
-    fullSlug: "bathroom-remodeling-lake-of-the-pines-ca",
+    fullSlug: "services/bathroom-remodeling/lake-of-the-pines",
     h1: "Bathroom Remodeling in Lake of the Pines, CA",
     metaTitle: "Bathroom Remodeling Lake of the Pines CA | Auburn Bath",
     metaDescription:
@@ -284,7 +284,7 @@ export const cities: City[] = [
   {
     slug: "meadow-vista",
     name: "Meadow Vista",
-    fullSlug: "bathroom-remodeling-meadow-vista-ca",
+    fullSlug: "services/bathroom-remodeling/meadow-vista",
     h1: "Bathroom Remodeling in Meadow Vista, CA",
     metaTitle: "Bathroom Remodeling Meadow Vista CA | Auburn Bath",
     metaDescription:
@@ -385,7 +385,7 @@ export const cities: City[] = [
   {
     slug: "newcastle",
     name: "Newcastle",
-    fullSlug: "bathroom-remodeling-newcastle-ca",
+    fullSlug: "services/bathroom-remodeling/newcastle",
     h1: "Bathroom Remodeling in Newcastle, CA",
     metaTitle: "Bathroom Remodeling Newcastle CA | Auburn Bath",
     metaDescription:
@@ -486,7 +486,7 @@ export const cities: City[] = [
   {
     slug: "colfax",
     name: "Colfax",
-    fullSlug: "bathroom-remodeling-colfax-ca",
+    fullSlug: "services/bathroom-remodeling/colfax",
     h1: "Bathroom Remodeling in Colfax, CA",
     metaTitle: "Bathroom Remodeling Colfax CA | Auburn Bath",
     metaDescription:
@@ -587,7 +587,7 @@ export const cities: City[] = [
   {
     slug: "loomis",
     name: "Loomis",
-    fullSlug: "bathroom-remodeling-loomis-ca",
+    fullSlug: "services/bathroom-remodeling/loomis",
     h1: "Bathroom Remodeling in Loomis, CA",
     metaTitle: "Bathroom Remodeling Loomis CA | Auburn Bath",
     metaDescription:
@@ -687,7 +687,7 @@ export const cities: City[] = [
   {
     slug: "penryn",
     name: "Penryn",
-    fullSlug: "bathroom-remodeling-penryn-ca",
+    fullSlug: "services/bathroom-remodeling/penryn",
     h1: "Bathroom Remodeling in Penryn, CA",
     metaTitle: "Bathroom Remodeling Penryn CA | Auburn Bath",
     metaDescription:
@@ -787,7 +787,7 @@ export const cities: City[] = [
   {
     slug: "grass-valley",
     name: "Grass Valley",
-    fullSlug: "bathroom-remodeling-grass-valley-ca",
+    fullSlug: "services/bathroom-remodeling/grass-valley",
     h1: "Bathroom Remodeling in Grass Valley, CA",
     metaTitle: "Bathroom Remodeling Grass Valley CA | Auburn Bath",
     metaDescription:
@@ -888,7 +888,7 @@ export const cities: City[] = [
   {
     slug: "nevada-city",
     name: "Nevada City",
-    fullSlug: "bathroom-remodeling-nevada-city-ca",
+    fullSlug: "services/bathroom-remodeling/nevada-city",
     h1: "Bathroom Remodeling in Nevada City, CA",
     metaTitle: "Bathroom Remodeling Nevada City CA | Auburn Bath",
     metaDescription:

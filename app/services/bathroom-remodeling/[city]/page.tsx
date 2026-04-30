@@ -8,17 +8,17 @@ import { buildMetadata } from "@/lib/seo";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return cities.map((c) => ({ citySlug: c.fullSlug }));
+  return cities.map((c) => ({ city: c.slug }));
 }
 
-type Params = { citySlug: string };
+type Params = { city: string };
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<Params>;
 }) {
-  const { citySlug } = await params;
+  const { city: citySlug } = await params;
   const city = cityBySlug(citySlug);
   if (!city) return {};
   return buildMetadata({
@@ -29,7 +29,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  const { citySlug } = await params;
+  const { city: citySlug } = await params;
   const city = cityBySlug(citySlug);
   if (!city) notFound();
   return (
@@ -39,7 +39,11 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           <Breadcrumbs
             trail={[
               { name: "Home", href: "/" },
-              { name: "Areas Served", href: "/areas-we-serve" },
+              { name: "Services", href: "/services" },
+              {
+                name: "Bathroom Remodeling",
+                href: "/services/bathroom-remodeling",
+              },
               { name: city.name, href: `/${city.fullSlug}` },
             ]}
           />
