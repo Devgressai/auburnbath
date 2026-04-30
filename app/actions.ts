@@ -11,7 +11,10 @@ export type ContactState = {
 
 const TO_RECIPIENTS = ["info@oakwoodremodel.com", "hello@webvello.com"];
 
-const FROM_DEFAULT = "Auburn Bath <hello@auburnbath.com>";
+// Sends from the Oakwood domain so we don't have to verify a second
+// sending domain on Resend. The lead's submitted email is set as
+// `replyTo`, so hitting Reply still goes to the homeowner.
+const FROM_DEFAULT = "Auburn Bath <info@oakwoodremodel.com>";
 
 export async function submitContact(
   _prev: ContactState,
