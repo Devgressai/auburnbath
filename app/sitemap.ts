@@ -60,6 +60,12 @@ const baseRoutes: Route[] = [
     imageSlugs: ["about-hero", "about-crew"],
   },
   {
+    path: "/about-oakwood-remodeling",
+    changeFrequency: "yearly",
+    priority: 0.45,
+    imageSlugs: ["about-hero"],
+  },
+  {
     path: "/contact",
     changeFrequency: "yearly",
     priority: 0.6,

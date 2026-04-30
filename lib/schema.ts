@@ -13,6 +13,7 @@ export function localBusinessSchema() {
     parentOrganization: {
       "@type": "Organization",
       name: site.parent,
+      url: site.parentUrl,
     },
     url: site.url,
     telephone: site.phone,

@@ -2,8 +2,9 @@ export const site = {
   name: "Auburn Bath",
   brand: "Auburn Bath",
   parent: "Oakwood Remodeling Group",
+  parentUrl: "https://oakwoodremodel.com/",
   parentLine:
-    "Auburn Bath is a bathroom remodeling service brand of Oakwood Remodeling Group.",
+    "Auburn Bath is a local service brand of Oakwood Remodeling Group.",
   url: "https://auburnbath.com",
   city: "Auburn",
   region: "CA",

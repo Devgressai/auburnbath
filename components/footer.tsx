@@ -26,7 +26,15 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-6 text-muted">
-            {site.parentLine}
+            Auburn Bath is a local service brand of{" "}
+            <a
+              href={site.parentUrl}
+              className="text-forest hover:text-forest-dark underline underline-offset-2"
+              rel="noopener"
+            >
+              Oakwood Remodeling Group
+            </a>
+            .
           </p>
           <p className="mt-3 text-xs uppercase tracking-[0.18em] text-muted">
             CA License <span className="text-charcoal">#{site.license}</span>
@@ -130,8 +138,7 @@ export function Footer() {
       <div className="border-t border-line/70 bg-cream">
         <Container className="flex flex-col gap-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
-            &copy; {year} {site.name}. A bathroom service brand of{" "}
-            {site.parent}.
+            &copy; {year} {site.name}. All rights reserved.
           </p>
           <nav aria-label="Legal" className="flex flex-wrap gap-5">
             <Link
@@ -151,6 +158,12 @@ export function Footer() {
               className="hover:text-forest transition-colors"
             >
               About
+            </Link>
+            <Link
+              href="/about-oakwood-remodeling"
+              className="hover:text-forest transition-colors"
+            >
+              About Oakwood
             </Link>
             <Link
               href="/areas-we-serve"

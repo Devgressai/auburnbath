@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero";
 import { HomeCredentials } from "@/components/home-credentials";
 import { HomeFaqCta } from "@/components/home-faq-cta";
 import { HomeInfoRow } from "@/components/home-info-row";
+import { HomeOakwoodTrust } from "@/components/home-oakwood-trust";
 import { ServicesOverview } from "@/components/services-overview";
 import { WeSpecialize } from "@/components/we-specialize";
 import { buildMetadata } from "@/lib/seo";
@@ -53,6 +54,7 @@ export default function Home() {
       <HomeInfoRow />
       <HomeCredentials />
       <HomeFaqCta items={homeFaqs} />
+      <HomeOakwoodTrust />
     </>
   );
 }
