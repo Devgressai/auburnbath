@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { allPosts } from "@/lib/blog";
 import { cities } from "@/lib/cities";
 import { site } from "@/lib/site";
 
@@ -89,7 +90,25 @@ const cityRoutes: Route[] = cities.map((c) => ({
   imageSlugs: [c.imageSlug],
 }));
 
-const routes: Route[] = [...baseRoutes, ...cityRoutes];
+const blogIndexRoute: Route = {
+  path: "/blog",
+  changeFrequency: "weekly",
+  priority: 0.7,
+};
+
+const blogPostRoutes: Route[] = allPosts.map((p) => ({
+  path: `/blog/${p.meta.slug}`,
+  changeFrequency: "monthly",
+  priority: 0.75,
+  imageSlugs: [p.meta.imageSlug],
+}));
+
+const routes: Route[] = [
+  ...baseRoutes,
+  ...cityRoutes,
+  blogIndexRoute,
+  ...blogPostRoutes,
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = CONTENT_LAST_UPDATED;

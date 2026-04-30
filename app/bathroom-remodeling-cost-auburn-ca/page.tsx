@@ -1,11 +1,13 @@
 import Link from "next/link";
 
+import { BlogCard } from "@/components/blog-card";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Container } from "@/components/container";
 import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { Hero } from "@/components/hero";
 import { SectionHeading } from "@/components/section-heading";
+import { findPost } from "@/lib/blog";
 import { articleSchema, jsonLdScript } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
@@ -233,6 +235,8 @@ export default function Page() {
         </Container>
       </section>
 
+      <RelatedInsightsCost />
+
       <FAQSection items={faqs} />
       <CTASection
         title="Get a real number for your Auburn bathroom remodel."
@@ -253,5 +257,56 @@ export default function Page() {
         )}
       />
     </>
+  );
+}
+
+function RelatedInsightsCost() {
+  const slugs = [
+    "how-long-does-a-bathroom-remodel-take-auburn-ca",
+    "tub-to-shower-resale-value-auburn",
+    "placer-county-bathroom-remodel-permits",
+  ];
+  const posts = slugs
+    .map((s) => findPost(s)?.meta)
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  if (posts.length === 0) return null;
+  return (
+    <section className="py-16 bg-sand">
+      <Container>
+        <SectionHeading
+          eyebrow="Related insights"
+          title="The other questions homeowners ask alongside cost."
+          description="Timeline, resale, and permits all intersect with budget — these three companion guides cover each."
+        />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((p) => (
+            <BlogCard key={p.slug} post={p} />
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-forest hover:text-forest-dark"
+          >
+            See all insights
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              className="h-3 w-3"
+              aria-hidden
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+              />
+            </svg>
+          </Link>
+        </div>
+      </Container>
+    </section>
   );
 }

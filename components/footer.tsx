@@ -192,6 +192,12 @@ export function Footer() {
               About
             </Link>
             <Link
+              href="/blog"
+              className="hover:text-forest transition-colors"
+            >
+              Insights
+            </Link>
+            <Link
               href="/about-oakwood-remodeling"
               className="hover:text-forest transition-colors"
             >
