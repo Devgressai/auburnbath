@@ -1,16 +1,16 @@
 import type { MetadataRoute } from "next";
 
+import { cities } from "@/lib/cities";
 import { site } from "@/lib/site";
 
 type Route = {
   path: string;
   changeFrequency: NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
   priority: number;
-  /** Filenames in `public/images/` (no extension) that appear on this page. */
   imageSlugs?: string[];
 };
 
-const routes: Route[] = [
+const baseRoutes: Route[] = [
   {
     path: "/",
     changeFrequency: "monthly",
@@ -68,6 +68,15 @@ const routes: Route[] = [
   { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.2 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.2 },
 ];
+
+const cityRoutes: Route[] = cities.map((c) => ({
+  path: `/${c.fullSlug}`,
+  changeFrequency: "monthly",
+  priority: 0.85,
+  imageSlugs: [c.imageSlug],
+}));
+
+const routes: Route[] = [...baseRoutes, ...cityRoutes];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

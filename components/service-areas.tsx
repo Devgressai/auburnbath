@@ -25,7 +25,7 @@ export function ServiceAreasGrid({
           {serviceAreas.map((area) => (
             <li key={area.slug}>
               <Link
-                href={`/areas-we-serve#${area.slug}`}
+                href={area.href}
                 className="group flex items-center gap-2 rounded-[var(--radius-card)] border border-line/80 bg-cream px-4 py-3.5 text-sm text-charcoal hover:border-forest/40 hover:text-forest transition-colors"
               >
                 <span

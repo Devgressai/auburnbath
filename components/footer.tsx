@@ -74,7 +74,7 @@ export function Footer() {
             {serviceAreas.map((a) => (
               <li key={a.slug}>
                 <Link
-                  href={`/areas-we-serve#${a.slug}`}
+                  href={a.href}
                   className="text-charcoal hover:text-forest transition-colors"
                 >
                   {a.name}

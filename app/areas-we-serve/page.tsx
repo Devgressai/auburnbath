@@ -53,10 +53,11 @@ export default function Page() {
           </div>
           <div className="grid gap-6 lg:col-span-8 lg:grid-cols-2">
             {serviceAreas.map((area) => (
-              <article
+              <Link
                 key={area.slug}
+                href={area.href}
                 id={area.slug}
-                className="rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 shadow-soft"
+                className="group block scroll-mt-24 rounded-[var(--radius-card)] border border-line/80 bg-cream p-6 shadow-soft transition-shadow hover:shadow-lift"
               >
                 <h2 className="font-display text-xl text-soft-black">
                   Bathroom remodeling in {area.name}
@@ -64,7 +65,27 @@ export default function Page() {
                 <p className="mt-3 text-sm leading-7 text-charcoal">
                   {area.blurb}
                 </p>
-              </article>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-forest">
+                  {area.slug === "auburn"
+                    ? "View Auburn services"
+                    : `View ${area.name} page`}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+                    aria-hidden
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5 21 12l-7.5 7.5M3 12h18"
+                    />
+                  </svg>
+                </span>
+              </Link>
             ))}
           </div>
         </Container>

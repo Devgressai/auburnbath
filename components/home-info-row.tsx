@@ -90,7 +90,7 @@ export function HomeInfoRow() {
             {serviceAreas.map((a) => (
               <li key={a.slug}>
                 <Link
-                  href={`/areas-we-serve#${a.slug}`}
+                  href={a.href}
                   className="group inline-flex items-center gap-2 text-charcoal hover:text-forest transition-colors"
                 >
                   <PinSm />

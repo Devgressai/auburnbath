@@ -75,64 +75,81 @@ export const services: Array<{
   },
 ];
 
-export const serviceAreas = [
+export const serviceAreas: Array<{
+  slug: string;
+  name: string;
+  /** Where the chip / hub card / footer link routes. Auburn uses the main
+   *  service page; the other 9 cities use their dedicated city page. */
+  href: string;
+  blurb: string;
+}> = [
   {
     slug: "auburn",
     name: "Auburn",
+    href: "/bathroom-remodeling-auburn-ca",
     blurb:
       "The heart of our service area. Auburn homes range from historic Old Town cottages to mid-century ranch homes and newer foothill builds, and each comes with its own bathroom layout quirks. We focus on durable waterproofing and finishes that match the character of the home.",
   },
   {
     slug: "north-auburn",
     name: "North Auburn",
+    href: "/bathroom-remodeling-north-auburn-ca",
     blurb:
       "Many North Auburn properties have larger primary bathrooms and good plumbing access, which opens up options for walk-in showers, double vanities, and reworked tub areas without major framing changes.",
   },
   {
     slug: "lake-of-the-pines",
     name: "Lake of the Pines",
+    href: "/bathroom-remodeling-lake-of-the-pines-ca",
     blurb:
       "Lake of the Pines homes often pair sloped lots with daylight basements and tighter guest baths. We design clean, low-maintenance bathrooms that hold up well in second homes and full-time foothill living alike.",
   },
   {
     slug: "meadow-vista",
     name: "Meadow Vista",
+    href: "/bathroom-remodeling-meadow-vista-ca",
     blurb:
       "Wooded lots, well water, and older copper or galvanized plumbing are common in Meadow Vista. Our team plans around these realities so the new bathroom looks polished and functions reliably for years.",
   },
   {
     slug: "newcastle",
     name: "Newcastle",
+    href: "/bathroom-remodeling-newcastle-ca",
     blurb:
       "Newcastle remodels often involve modernizing primary baths in established homes — replacing tubs, opening up cramped showers, and updating tile, lighting, and ventilation in one coordinated project.",
   },
   {
     slug: "colfax",
     name: "Colfax",
+    href: "/bathroom-remodeling-colfax-ca",
     blurb:
       "Colfax homes can sit on steep grades and older infrastructure. We take care with subfloor prep, ventilation, and waterproofing so the finished bathroom performs as well as it looks.",
   },
   {
     slug: "loomis",
     name: "Loomis",
+    href: "/bathroom-remodeling-loomis-ca",
     blurb:
       "From rural acreage to newer subdivisions, Loomis bathrooms tend to favor clean, timeless finishes. We help homeowners blend updated layouts with materials that complement the surrounding country setting.",
   },
   {
     slug: "penryn",
     name: "Penryn",
+    href: "/bathroom-remodeling-penryn-ca",
     blurb:
       "Penryn properties often value craftsmanship and longevity over trends. Our process leans into careful tile work, quality plumbing fixtures, and bathrooms designed to age gracefully.",
   },
   {
     slug: "grass-valley",
     name: "Grass Valley",
+    href: "/bathroom-remodeling-grass-valley-ca",
     blurb:
       "Many Grass Valley homes have older, smaller bathrooms with original layouts. We routinely remove tubs, redesign showers, and modernize ventilation to bring those baths up to today's standards.",
   },
   {
     slug: "nevada-city",
     name: "Nevada City",
+    href: "/bathroom-remodeling-nevada-city-ca",
     blurb:
       "Historic Nevada City homes deserve a bathroom remodel that respects character while quietly improving function — better waterproofing, cleaner layouts, and finishes that feel period-appropriate without looking dated.",
   },
