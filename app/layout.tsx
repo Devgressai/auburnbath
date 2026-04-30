@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 
+import { DesktopFloatingCTA } from "@/components/desktop-floating-cta";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
+import { PromoBar } from "@/components/promo-bar";
 import { jsonLdScript, localBusinessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -82,12 +84,14 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <PromoBar />
         <Header />
         <main id="main" className="flex-1 pb-24 lg:pb-0">
           {children}
         </main>
         <Footer />
         <MobileStickyCTA />
+        <DesktopFloatingCTA />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={jsonLdScript(localBusinessSchema())}
