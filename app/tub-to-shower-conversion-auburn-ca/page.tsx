@@ -188,6 +188,114 @@ export default function Page() {
         </Container>
       </section>
 
+      <section className="py-16 bg-sage-light/45">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Materials & systems we use"
+              title="The systems behind a conversion that lasts."
+              description="Specific brands and methods. The materials decide whether the shower performs in five years."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <h3>Subfloor + framing</h3>
+            <p>
+              Conversions often expose compromised subfloor under the old
+              tub. Our default repair: replace down to the joists with{" "}
+              <strong>3/4&Prime; tongue-and-groove plywood</strong>{" "}
+              fastened with construction adhesive plus screws. We
+              reinforce or sister joists where rot has reduced bearing
+              capacity before any new pan goes down.
+            </p>
+            <h3>Waterproofing</h3>
+            <p>
+              <strong>Schluter Kerdi</strong> bonded sheet membrane on
+              the walls and pan, lapped properly into the drain flange.
+              For curbless conversions, <strong>Schluter Kerdi-Shower
+              ST</strong> pre-sloped trays sized to the new opening, set
+              into a recessed subfloor so the floor surface stays
+              continuous.
+            </p>
+            <h3>Drains + thresholds</h3>
+            <p>
+              <strong>Schluter Kerdi-Line</strong> linear drains for
+              modern conversions; standard 2&Prime; center drains where
+              the layout calls for it. Threshold options range from a
+              clean curbless approach to a 1-2&Prime; low-threshold
+              built up with mortar-bed and tile, depending on subfloor
+              condition and accessibility needs.
+            </p>
+            <h3>Plumbing rework</h3>
+            <p>
+              We move the valve, rough-in, and drain to fit the new
+              shower layout. Where original galvanized supply is
+              encountered, we replace with PEX up to the manifold while
+              the wall is already open — it's the right time, and it
+              avoids a callback five years later.
+            </p>
+            <h3>Tile + fixtures</h3>
+            <p>
+              Stone-look porcelain in 12×24 or 24×48 large-format on
+              walls, with a smaller mosaic on the shower floor for slip
+              resistance. <strong>Brizo</strong>, higher-tier{" "}
+              <strong>Kohler</strong>, or <strong>California Faucets</strong>{" "}
+              for valves and trim — replaceable cartridges, solid brass.
+              Frameless 3/8&Prime; or 1/2&Prime; low-iron glass with CRL
+              hinges.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="What can go wrong"
+              title="The mistakes that turn a conversion into a callback."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <p>
+              Conversions fail in predictable ways. Skipping any of these
+              is what causes a homeowner to call a different contractor
+              two years later.
+            </p>
+            <ul>
+              <li>
+                <strong>Subfloor not assessed at demo.</strong> If the
+                old tub leaked even slowly, the wood under it is usually
+                compromised — and any new waterproofing on a soft
+                subfloor moves and fails.
+              </li>
+              <li>
+                <strong>Drain offset improperly relocated.</strong> A drain
+                moved a few inches needs the joist layout below to be
+                planned for it. Routing through a joist instead of around
+                it weakens framing and risks leaks.
+              </li>
+              <li>
+                <strong>Curbless threshold without a recessed subfloor.</strong>{" "}
+                If the shower floor isn't recessed below the surrounding
+                floor, water has nowhere to slope to and finds its way
+                out.
+              </li>
+              <li>
+                <strong>Original supply lines kept in place.</strong>{" "}
+                Galvanized pipes lose internal diameter over decades.
+                Patching new shower work onto failing supply just delays
+                the next problem.
+              </li>
+              <li>
+                <strong>Vent fan vented into the attic.</strong> A
+                conversion is the right time to vent the fan exterior —
+                doing it later means opening the wall again.
+              </li>
+            </ul>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading

@@ -134,6 +134,120 @@ export default function Page() {
         </Container>
       </section>
 
+      <section className="py-16 bg-sage-light/45">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Materials & systems we actually use"
+              title="What's behind the tile matters more than the tile."
+              description="Specific brands, specific systems. We're happy to talk through alternatives — these are our defaults because they hold up."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <h3>Waterproofing</h3>
+            <p>
+              <strong>Schluter Kerdi</strong> bonded sheet membranes are
+              our default for tile shower walls and pans. For curbless or
+              pre-sloped pans, we use Schluter Kerdi-Shower trays sized to
+              the room. On rebuilds where a fully bonded sheet membrane
+              isn't practical, we'll fall back to <strong>RedGard</strong>{" "}
+              or <strong>Hydro Ban</strong> liquid-applied membranes,
+              applied at the manufacturer-specified mil thickness with
+              full corner detailing.
+            </p>
+            <h3>Drains</h3>
+            <p>
+              <strong>Schluter Kerdi-Line</strong> linear drains with
+              tile-in covers for curbless and modern walk-in showers;{" "}
+              <strong>Infinity Drain</strong> for higher-end specifications
+              where the cover finish needs to match a specific hardware
+              line. Standard center drains where the layout calls for it,
+              always with the membrane lapped properly into the drain
+              flange.
+            </p>
+            <h3>Tile</h3>
+            <p>
+              For most Auburn projects we lean into stone-look porcelain
+              in 12×24 or 24×48 large-format — durable, low-maintenance,
+              forgiving in foothill humidity. Lines we've returned to
+              repeatedly: <strong>MSI Surface Group</strong>{" "}
+              (stone-look ranges), <strong>Daltile</strong>,{" "}
+              <strong>Florida Tile</strong>, and{" "}
+              <strong>Bedrosians</strong> for hand-glazed and zellige
+              accents.
+            </p>
+            <h3>Glass</h3>
+            <p>
+              <strong>3/8&Prime; low-iron</strong> glass for panels up to
+              about 36&Prime;; <strong>1/2&Prime;</strong> for wider
+              panels and door spans. We seal edges and use sturdy hinges
+              (CRL or equivalent), with a hydrophobic coating in
+              hard-water areas to slow mineral spotting. Frameless is the
+              default; semi-frameless when a tight enclosure or layout
+              quirk calls for it.
+            </p>
+            <h3>Fixtures</h3>
+            <p>
+              <strong>Brizo</strong>, higher-tier{" "}
+              <strong>Kohler</strong>, <strong>California Faucets</strong>,{" "}
+              <strong>Riobel</strong>, and <strong>Rohl</strong> for
+              brass and quality plated finishes — all with replaceable
+              cartridges and ceramic discs. Pressure-balanced or
+              thermostatic valves where the home's plumbing pressure
+              warrants it.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="What can go wrong"
+              title="Most failed showers fail in the same five places."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <p>
+              When we open up a shower that's failed within ten years of
+              install, the same five mistakes show up over and over. None
+              of them are about tile pattern.
+            </p>
+            <ul>
+              <li>
+                <strong>Improperly lapped membrane corners.</strong> The
+                walls and pan need to be tied together with overlapping
+                waterproofing — water finds the smallest gap.
+              </li>
+              <li>
+                <strong>Pan not bonded to the drain flange.</strong>{" "}
+                Without a proper bond, water runs sideways under the tile.
+              </li>
+              <li>
+                <strong>Slope too shallow toward the drain.</strong> 1/4
+                inch per foot is the minimum; we pour 1/4 to 3/8 so water
+                has somewhere to actually go.
+              </li>
+              <li>
+                <strong>Niches set without back-pan waterproofing.</strong>{" "}
+                The niche is a five-sided box — every face needs the
+                membrane.
+              </li>
+              <li>
+                <strong>Underpowered or improperly vented exhaust fan.</strong>{" "}
+                Humidity that sits against grout for years degrades it
+                regardless of how well the membrane was installed.
+              </li>
+            </ul>
+            <p>
+              We treat all five as non-negotiable. The bathroom you can't
+              see is what makes the bathroom you can see hold up.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading

@@ -47,6 +47,24 @@ export type City = {
   featuredServices?: ServiceKey[];
   /** Slugs of 2–3 nearest sister cities, for cross-linking. */
   nearbySlugs?: string[];
+  /** Architectural eras + housing stock notes specific to this city. */
+  architectureNotes: {
+    title: string;
+    paragraphs: string[];
+  };
+  /** A representative project we delivered (or routinely deliver) here. */
+  projectExample: {
+    title: string;
+    summary: string;
+    paragraphs: string[];
+    spec: Array<{ label: string; value: string }>;
+  };
+  /** Practical local realities — drive time, permits, water, HOAs. */
+  expectLocally: {
+    title: string;
+    intro: string;
+    items: Array<{ label: string; body: string }>;
+  };
 };
 
 const FEATURED_DEFAULT: ServiceKey[] = [
@@ -116,6 +134,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["newcastle", "loomis", "meadow-vista"],
+    architectureNotes: {
+      title: "North Auburn's four bathroom-remodel eras",
+      paragraphs: [
+        "North Auburn's housing stock spans roughly four building eras and each one comes with its own bathroom-remodel character. The smallest slice is pre-1970 ranches — original galvanized supply lines, cast-iron drains tucked behind plaster, smaller primary baths. The dominant era is 1980s and 1990s subdivisions: builder-grade primary bathrooms with corner garden tubs, fluorescent above-mirror lighting, oak vanities, and slab foundations with copper or PEX supply lines that age well. Then 2000s expansions that pushed primary bathrooms even larger but mostly kept the same generic finish playbook. And finally newer custom builds on the back loops where primary bathrooms can be oversized and waiting for real design.",
+        "The work changes with the era. In a 1970s ranch we plan for tight plumbing access, possible cast-iron transitions, and a small footprint that benefits from layout changes — most projects open up a wall or move a door. In 1980s and 1990s subdivision stock the bones are usually great; the dated design is the only thing holding the bathroom back, so we keep walls in place and rework everything else. In newer custom homes the question is rarely \"can we do this?\" and almost always \"what's the right restraint?\"",
+      ],
+    },
+    projectExample: {
+      title: "Typical North Auburn primary bath project",
+      summary:
+        "9×12 primary bath in a 1990s subdivision home, full rebuild without moving walls.",
+      paragraphs: [
+        "A representative North Auburn project we run a couple times a year: 9×12 primary bath in a mid-1990s subdivision home. The original room had a corner garden tub the homeowner hadn't used in eight years, a small fiberglass shower, an oak double vanity, and fluorescent above-mirror lighting. The plumbing was solid — copper supply, ABS drains, slab pour with the existing layout still working.",
+        "We removed the corner tub entirely, expanded the shower into a 4×6 frameless-glass walk-in with sage stone-look porcelain floor-to-ceiling, replaced the vanity with rift oak floating cabinetry on honed quartz, and rebuilt the lighting around two sconces plus dimmable recessed cans. Plumbing rerouted minimally — just the new shower drain and a rain-head supply. Subfloor was clean (no tub leakage history), so no reinforcement needed.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "9×12 ft (108 sq ft)" },
+        { label: "Active build", value: "4 weeks" },
+        { label: "Permits", value: "Pulled with Placer County" },
+        { label: "Notable scope", value: "Tub removal + walk-in shower" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — North Auburn",
+      intro:
+        "Practical realities of running a bathroom remodel in this part of Placer County:",
+      items: [
+        {
+          label: "Drive time",
+          body: "10–15 minutes from our Auburn shop. Materials and trades cycle through the day without burning schedule.",
+        },
+        {
+          label: "Permits",
+          body: "Placer County Building Department for the unincorporated parts of North Auburn (most of it). We pull permits and coordinate inspections.",
+        },
+        {
+          label: "Water",
+          body: "Placer County Water Agency for nearly all addresses — predictable pressure, standard supply chemistry, no special fixture considerations.",
+        },
+        {
+          label: "HOA",
+          body: "Most North Auburn subdivisions only review exterior changes. Interior bathroom remodels rarely require any HOA approval.",
+        },
+      ],
+    },
   },
   {
     slug: "lake-of-the-pines",
@@ -172,6 +235,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["meadow-vista", "colfax", "grass-valley"],
+    architectureNotes: {
+      title: "Building eras around Lake of the Pines",
+      paragraphs: [
+        "Lake of the Pines homes fall into three rough eras. The lakefront originals from the 1970s — cabin-style with small primary baths, alcove tubs, and plumbing that often hasn't been touched since the home was built. The middle wave is 1980s and 1990s expansions and second-line homes that introduced larger primary bathrooms with garden tubs and fiberglass shower stalls. The newer custom builds on the outer loops have generous primary baths and modern infrastructure but were often finished to a builder spec rather than designed.",
+        "Sloped lots are the constant. A lot of lakefront and view homes sit above daylight basements, which means primary bathrooms commonly live on a level where the subfloor structure matters more than it would on a slab. Curbless walk-in showers, in particular, need careful joist planning and bonded waterproofing because there's living space below — there's no margin for a leaky pan.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Lake of the Pines remodel",
+      summary:
+        "Lakefront 1980s primary bath, low-threshold walk-in shower, second-home schedule.",
+      paragraphs: [
+        "A common Lake of the Pines project type: 1980s lakefront primary bath, second-home use, owners coming up on weekends from the Bay Area. The original room had a fiberglass tub-shower combo over a daylight basement, a single oak vanity, and a window with a view of the lake we wanted to protect.",
+        "We replaced the tub with a low-threshold walk-in shower (we kept a 1-inch curb rather than going fully curbless because the subfloor over a heated basement made that the safer call), installed a sage stone-tile shower with a built-in bench facing the window, swapped the oak vanity for warm walnut on a honed quartz counter, and redid the lighting around the natural light. We sent the owner weekly photo updates because they weren't on site.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "8×10 ft" },
+        { label: "Active build", value: "3.5 weeks" },
+        { label: "Permits", value: "Pulled with Nevada County" },
+        { label: "Notable scope", value: "Tub-to-shower over daylight basement" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Lake of the Pines",
+      intro:
+        "Lake of the Pines is a gated Nevada County community with its own working-around realities:",
+      items: [
+        {
+          label: "Drive time",
+          body: "Roughly 30 minutes from our Auburn shop. We bundle material runs into longer on-site days to keep schedule efficient.",
+        },
+        {
+          label: "Permits",
+          body: "Nevada County Building Department for most addresses. We pull permits and coordinate inspections, which is especially relevant when work happens over a daylight basement.",
+        },
+        {
+          label: "Water",
+          body: "Nevada Irrigation District for the community. Standard pressure, no unusual chemistry — fixtures hold up well.",
+        },
+        {
+          label: "HOA + access",
+          body: "Lake of the Pines has gate access — we coordinate codes or escort access ahead of every workday. Interior remodels generally don't trigger HOA review; exterior changes do.",
+        },
+      ],
+    },
   },
   {
     slug: "meadow-vista",
@@ -228,6 +336,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["lake-of-the-pines", "colfax", "north-auburn"],
+    architectureNotes: {
+      title: "Meadow Vista's housing eras and the well-water reality",
+      paragraphs: [
+        "Most Meadow Vista homes fall into one of two eras: 1970s and 1980s rural builds on larger acreage parcels, and a steady flow of newer custom homes from the 2000s onward filling in around the older stock. The older builds typically still have copper or galvanized supply lines, original cast-iron drains, and primary bathrooms designed around 1970s assumptions — small showers, alcove tubs, single-bowl vanities. Newer custom homes are usually well-built but were often finished to a generic spec sheet rather than designed.",
+        "The constant in both is well water. A meaningful share of Meadow Vista homes are on private wells with mineral content that's tougher on plated finishes, glass, and grout than municipal water. Pressure varies seasonally. Septic is also common, which puts soft constraints on flow rates and high-flow fixture choices. Designing around those realities at the fixture and material level is the difference between a bathroom that looks polished after one year and one that still looks polished after seven.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Meadow Vista remodel",
+      summary:
+        "1970s acreage home, full primary-bath rebuild with plumbing replacement and hard-water-tolerant fixtures.",
+      paragraphs: [
+        "Representative Meadow Vista project: 1970s ranch home on five acres, well water, primary bathroom hadn't been touched since the home was built. The original room had galvanized supply lines, an alcove tub the owners didn't use, a fiberglass shower stall with original cement-board behind it, and a single oak vanity.",
+        "We pulled the tub, demoed the shower to studs, replaced all visible galvanized supply with PEX up to the manifold, installed a Schluter Kerdi waterproofed walk-in shower with a Schluter Kerdi-Line linear drain, picked Brizo Litze fixtures with replaceable cartridges, sealed the grout with a quality penetrating sealer, and added a frameless glass enclosure with a hydrophobic coating to handle hard-water spotting.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "9×11 ft" },
+        { label: "Active build", value: "5 weeks (extra plumbing scope)" },
+        { label: "Permits", value: "Pulled with Placer County" },
+        { label: "Notable scope", value: "Galvanized → PEX replacement + walk-in shower" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Meadow Vista",
+      intro:
+        "Practical realities for a Meadow Vista bathroom remodel:",
+      items: [
+        {
+          label: "Drive time",
+          body: "About 20 minutes from our Auburn shop. Routine — material cycles run through the day without affecting build cadence.",
+        },
+        {
+          label: "Permits",
+          body: "Placer County Building Department for unincorporated Meadow Vista (which is most of it). We pull permits and coordinate inspections.",
+        },
+        {
+          label: "Water + septic",
+          body: "Many homes on private wells with mineral content — we specify replaceable-cartridge fixtures, sealed grout, and glass with hydrophobic coatings. We also size flow rates around existing septic capacity.",
+        },
+        {
+          label: "Access",
+          body: "Long driveways and rural access are normal — we plan staging at the home so deliveries and dumpsters don't disrupt your access or your neighbor's.",
+        },
+      ],
+    },
   },
   {
     slug: "newcastle",
@@ -284,6 +437,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["loomis", "penryn", "north-auburn"],
+    architectureNotes: {
+      title: "Newcastle building eras",
+      paragraphs: [
+        "Newcastle's housing stock is a mix. The dominant cohort is mid-century ranch homes (1960s–1970s) and 1980s custom builds, both with primary bathrooms that tend to be larger than what you'd find in older Auburn homes. There's also a smaller pocket of newer rural builds going back roughly 20 years — generous footprints, good bones, dated finish.",
+        "What's typical across all three eras: separate water-closet rooms inside the primary bath, oversized garden tubs that have aged into laundry baskets, and shower enclosures that were modern when they were built and now read tired. The structural bones are usually solid; the layout is what holds the bathroom back. Plumbing is generally good — copper or PEX, ABS drains, accessible from below in homes with a crawlspace.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Newcastle remodel",
+      summary:
+        "1985 primary bath, full rebuild keeping walls in place, walk-in shower replacing tub.",
+      paragraphs: [
+        "Representative Newcastle project: 1985 custom home, 11×13 primary bath. The original layout had a separate water-closet room with a swing door, a garden tub on the longest wall, and a fiberglass corner shower. We kept the water closet but replaced the swing door with a pocket door (gained about 8 sq ft of usable space), pulled the tub entirely, and built a 4×7 walk-in shower along the longest wall.",
+        "Tile was a sage stone-look porcelain in a 24×48 large-format on the walls and a smaller mosaic on the shower floor. Frameless glass with brushed brass hinges. New double rift oak vanity replaced the dated oak doubles. Primary bathroom now reads modern but still belongs to the home — no jarring contrast with the rest of the house.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "11×13 ft" },
+        { label: "Active build", value: "5 weeks" },
+        { label: "Permits", value: "Pulled with Placer County" },
+        { label: "Notable scope", value: "Tub removal + WC pocket-door swap" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Newcastle",
+      intro:
+        "Newcastle is established Placer County — easy to work in:",
+      items: [
+        {
+          label: "Drive time",
+          body: "15–20 minutes from our Auburn shop via Highway 193, depending on traffic.",
+        },
+        {
+          label: "Permits",
+          body: "Placer County Building Department for nearly all Newcastle addresses. We pull and coordinate inspections.",
+        },
+        {
+          label: "Water",
+          body: "Mostly Placer County Water Agency. A handful of properties on the rural edges have wells — we'll know after the consultation walkthrough.",
+        },
+        {
+          label: "Access",
+          body: "Standard suburban access for most homes. A few rural-acreage properties to the east have longer driveways we plan around.",
+        },
+      ],
+    },
   },
   {
     slug: "colfax",
@@ -340,6 +538,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["meadow-vista", "lake-of-the-pines", "grass-valley"],
+    architectureNotes: {
+      title: "Colfax's gold-rush housing stock",
+      paragraphs: [
+        "Colfax's housing skews older than almost anywhere else in our service area. The historic in-town homes go back to the late 1800s and early 1900s — gold-rush era and railroad-town stock with hand-framed walls, original lath and plaster, and bathrooms that were retrofitted into rooms not designed for plumbing. Then mid-century post-war homes from the 1940s–1960s, often modest in footprint with simple alcove tubs and small tile showers. Newer builds outside town are a smaller share but real — modern construction, modern infrastructure.",
+        "Working in pre-1970 Colfax means walls aren't always square, subfloors aren't always level, and what's behind the tile rarely matches the original prints. We don't treat that as a problem; we plan for it. Our Colfax estimates carry a small subfloor and supply-line contingency by default — if we don't need it, you don't pay it. We'd rather be ready than surprised.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Colfax remodel",
+      summary:
+        "1920s in-town home, full bathroom rebuild with subfloor reinforcement and modern waterproofing.",
+      paragraphs: [
+        "Representative Colfax project: 1920s in-town home, single bathroom, 7×9 ft. Original cast-iron tub, tile shower with cement-board substrate, galvanized supply lines, no real exhaust ventilation. Walls measured a half-inch out of square at the corners.",
+        "We demoed to studs, replaced 8 ft of compromised subfloor under the old tub, replaced the visible galvanized with PEX up to the manifold, installed a Schluter Kerdi-membrane walk-in shower with a linear drain, ran a real exterior vent for the new exhaust fan, and worked the tile layout around the out-of-square walls (a deliberate shadow-line trim at one corner absorbed the variance cleanly). Period-appropriate small-format hand-glazed tile, warm wood vanity, brass fixtures.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "7×9 ft" },
+        { label: "Active build", value: "5 weeks (subfloor + plumbing scope)" },
+        { label: "Permits", value: "Pulled with Placer County" },
+        { label: "Notable scope", value: "Subfloor replacement + galvanized → PEX" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Colfax",
+      intro:
+        "Colfax remodels need a little extra planning. Here's what's specific:",
+      items: [
+        {
+          label: "Drive time",
+          body: "About 25 minutes from our Auburn shop on I-80. We plan full days on site rather than half-days so the drive doesn't shorten productive build time.",
+        },
+        {
+          label: "Permits",
+          body: "Placer County Building Department for unincorporated areas; the City of Colfax has its own building department for in-town addresses. We pull through whichever applies.",
+        },
+        {
+          label: "Water",
+          body: "City of Colfax water for in-town homes; private wells on rural properties. We confirm during the walkthrough so we can spec fixtures appropriately.",
+        },
+        {
+          label: "What's commonly hidden",
+          body: "Older homes commonly have subfloor compromise under tubs, original galvanized supply lines, and improper or missing exhaust venting. We carry a contingency for these and discuss findings transparently if they appear during demo.",
+        },
+      ],
+    },
   },
   {
     slug: "loomis",
@@ -395,6 +638,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["penryn", "newcastle", "north-auburn"],
+    architectureNotes: {
+      title: "Loomis's mix of rural acreage and newer subdivisions",
+      paragraphs: [
+        "Loomis sits in the comfortable transition between foothill and Sacramento Valley, and the housing stock reflects that. Two main eras dominate: 1980s and 1990s rural-acreage homes on larger parcels, and a steady run of newer subdivisions from the 2000s onward on smaller lots. A smaller subset of older mid-century ranches rounds it out.",
+        "Plumbing is good across all eras. Most homes have copper or PEX supply, ABS drains, and primary bathrooms sized for a real walk-in shower. The dated thing is rarely the bones — it's the design. Builder-grade tile, fluorescent strip lighting, stock oak vanities, and corner garden tubs are the typical complaints. Loomis homeowners we work with usually want timeless rather than trendy, which fits our default direction perfectly.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Loomis remodel",
+      summary:
+        "2003 subdivision primary bath, garden-tub removal + walk-in shower upgrade.",
+      paragraphs: [
+        "Representative Loomis project: 2003 subdivision home, 10×11 primary bath. The original layout had a corner garden tub the homeowner had used twice in twelve years, a fiberglass corner shower with a plastic surround, an oak double vanity, and big-box-store light fixtures. Plumbing was modern and well-located.",
+        "We removed the tub entirely and gave that wall to a 4×6 walk-in shower with frameless glass, a sage stone-look porcelain in 24×48 large-format, a built-in horizontal niche, and a brushed brass thermostatic shower head. Replaced the vanity with rift oak floating cabinetry on honed quartz, swapped the lighting for sconces plus dimmable cans, and refreshed the floor tile. Plumbing rerouted minimally — just the new shower drain placement.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "10×11 ft" },
+        { label: "Active build", value: "4 weeks" },
+        { label: "Permits", value: "Pulled with Placer County" },
+        { label: "Notable scope", value: "Garden-tub removal + walk-in shower" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Loomis",
+      intro:
+        "Loomis is straightforward to work in. Specifics:",
+      items: [
+        {
+          label: "Drive time",
+          body: "About 25 minutes from our Auburn shop on I-80. We run a normal build cadence with no schedule penalty for the drive.",
+        },
+        {
+          label: "Permits",
+          body: "Town of Loomis Building Department for incorporated addresses; Placer County for unincorporated rural acreage. We pull through whichever applies.",
+        },
+        {
+          label: "Water",
+          body: "Placer County Water Agency for most subdivision homes. Some rural-acreage parcels are on wells — we confirm during the walkthrough and adjust fixture spec if needed.",
+        },
+        {
+          label: "Septic",
+          body: "Rural-acreage homes are often on septic. We size flow rates around existing septic capacity and avoid pushing high-flow rain heads or two-shower setups beyond what the system can handle.",
+        },
+      ],
+    },
   },
   {
     slug: "penryn",
@@ -450,6 +738,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["loomis", "newcastle", "north-auburn"],
+    architectureNotes: {
+      title: "Penryn's quiet mix of farmhouses, ranches, and customs",
+      paragraphs: [
+        "Penryn's housing stock is small and diverse. Older farmhouses go back to the early 1900s — modest in footprint, with primary bathrooms often retrofitted into rooms originally meant for something else. Mid-century ranches from the 1950s and 1960s sit on larger lots with simple, working layouts. Newer custom homes from the 1990s onward fill in around them with larger primary bathrooms and modern infrastructure.",
+        "What unifies all three eras is what Penryn homeowners want: longevity. The standard direction in Penryn isn't \"make it modern\" — it's \"make it last and still look right in twenty years.\" That maps directly to the materials we lean into: stone-look porcelain, hand-glazed accent tile, real wood vanities, solid-brass fixtures with replaceable cartridges, and frameless low-iron glass. Restraint is the design.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Penryn remodel",
+      summary:
+        "1960s ranch, primary bath rebuilt with heritage-aware tile and quality brass fixtures.",
+      paragraphs: [
+        "Representative Penryn project: 1962 ranch home, 8×10 primary bath. The original room was small but well-proportioned — alcove tub on the long wall, single vanity, a window with morning light. The homeowner wanted modern function without losing the home's character.",
+        "We kept the alcove tub footprint but converted it to a low-threshold walk-in shower. Tile was hand-glazed zellige in a soft sage green floor-to-ceiling — slower to set, but the variation gave the shower a depth large-format porcelain can't match. Walnut floating vanity replaced the oak. Brizo Litze brass fixtures throughout. Frameless 3/8\" low-iron glass. The bathroom now reads timeless rather than dated, and it doesn't feel out of place in a sixty-year-old home.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "8×10 ft" },
+        { label: "Active build", value: "5 weeks (zellige tile timing)" },
+        { label: "Permits", value: "Pulled with Placer County" },
+        { label: "Notable scope", value: "Tub-to-shower + heritage-aware tile" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Penryn",
+      intro:
+        "Penryn projects move at a thoughtful pace — here's what's relevant:",
+      items: [
+        {
+          label: "Drive time",
+          body: "About 25 minutes from our Auburn shop. We schedule longer on-site days to keep drive overhead from cutting into productive build hours.",
+        },
+        {
+          label: "Permits",
+          body: "Placer County Building Department — Penryn is unincorporated. We pull permits and coordinate inspections.",
+        },
+        {
+          label: "Water",
+          body: "Placer County Water Agency for most homes; some rural acreage on wells. We confirm during the walkthrough and adjust fixture spec where appropriate.",
+        },
+        {
+          label: "Pace",
+          body: "Penryn projects often involve more time in selection — tile review, hardware sampling, glass detailing. We build that time into our process and don't rush it.",
+        },
+      ],
+    },
   },
   {
     slug: "grass-valley",
@@ -506,6 +839,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["nevada-city", "colfax", "meadow-vista"],
+    architectureNotes: {
+      title: "Grass Valley's gold-rush layered housing stock",
+      paragraphs: [
+        "Grass Valley's bathroom remodel work spans real history. Late-1800s gold-rush homes (small footprints, original lath-and-plaster walls, retrofitted plumbing), early 1900s Victorian and Craftsman builds, mid-century post-war additions, and 1970s-onward updates that have run their useful life. The dominant cohort we work in is pre-1970 stock — small bathrooms, alcove tubs on cement-board substrates, exhaust fans that vent into attics, and supply lines well past replacement age.",
+        "These bathrooms reward thoughtful redesign rather than cosmetic refresh. Removing an alcove tub, replacing a swing door with a pocket door, swapping a wall-mount vanity for a wall-hung floating piece, and re-tiling with light-bouncing finishes can make a 6×8 Grass Valley bathroom feel twice as big without adding any actual square footage.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Grass Valley remodel",
+      summary:
+        "Pre-1940 in-town home, 6×8 bathroom rethought from layout up.",
+      paragraphs: [
+        "Representative Grass Valley project: pre-1940 in-town home, single 6×8 bathroom. Original alcove tub, tile shower with cement-board substrate failing at the pan, no real exhaust ventilation, galvanized supply, and a swing door that ate floor space.",
+        "We pulled the tub, demoed the shower to studs, replaced the supply lines with PEX up to the manifold, replaced 6 ft of compromised subfloor under the tub area, installed a Schluter Kerdi-membrane walk-in shower with a linear drain, ran a real exterior vent for the new exhaust fan, and replaced the swing door with a pocket door. Period-appropriate small-format white subway with sage trim, a wall-hung walnut floating vanity, brass fixtures.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "6×8 ft" },
+        { label: "Active build", value: "5 weeks (subfloor + plumbing scope)" },
+        { label: "Permits", value: "Pulled with City of Grass Valley" },
+        { label: "Notable scope", value: "Layout rethink + subfloor + plumbing" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Grass Valley",
+      intro:
+        "Grass Valley remodels need a deliberate pace. Specifics:",
+      items: [
+        {
+          label: "Drive time",
+          body: "About 30 minutes from our Auburn shop via Highway 49. We schedule longer on-site days so drive overhead doesn't shorten productive build time.",
+        },
+        {
+          label: "Permits",
+          body: "City of Grass Valley Building Department for in-town addresses; Nevada County for outside-of-town homes. We pull through whichever applies.",
+        },
+        {
+          label: "Water",
+          body: "Nevada Irrigation District for most homes — predictable pressure, standard chemistry.",
+        },
+        {
+          label: "What's commonly hidden",
+          body: "Older Grass Valley bathrooms often have subfloor compromise, original cast-iron drains hidden behind plaster, and venting that goes into the attic instead of outside. We carry contingency for these and discuss findings transparently if they appear during demo.",
+        },
+      ],
+    },
   },
   {
     slug: "nevada-city",
@@ -561,6 +939,51 @@ export const cities: City[] = [
     ],
     featuredServices: FEATURED_DEFAULT,
     nearbySlugs: ["grass-valley", "colfax", "lake-of-the-pines"],
+    architectureNotes: {
+      title: "Nevada City's Victorian historic core",
+      paragraphs: [
+        "Nevada City has one of the most distinctive historic districts in California, and the bathroom remodel work reflects that. The dominant building era is 1860s–1900s Victorian and gold-rush homes — small bathrooms retrofitted into rooms originally meant for storage or a sewing nook, original wood floors that were never planned for a tile pan above them, and plumbing that has stories. Surrounding the historic core are mid-century cottages from the 1940s–1960s and a small share of newer homes outside the district proper.",
+        "Most homeowners we work with in Nevada City want modern function without erasing the home's history. That balance is genuinely hard. The wrong move is over-modernizing — dropping a glossy contemporary bathroom into a Victorian home reads as a violation of the building. The opposite mistake is under-designing: keeping every dated layout because it's \"original.\" The right move is somewhere in the middle: modern waterproofing, real ventilation, accessible plumbing, period-appropriate tile and hardware, and a layout that respects the room's proportions.",
+      ],
+    },
+    projectExample: {
+      title: "Typical Nevada City remodel",
+      summary:
+        "1880s Victorian home, primary bath rebuilt with period-respecting finishes and modern systems.",
+      paragraphs: [
+        "Representative Nevada City project: 1880s Victorian, 7×9 primary bath. Original cast-iron tub, hand-set tile shower with cement-board substrate, original lath-and-plaster walls, no exhaust venting, galvanized supply, plate-rail-style original moldings worth saving.",
+        "We worked carefully — kept the moldings, removed the tub, demoed the shower to studs (preserving the original wall framing), replaced the supply with PEX, installed a Schluter Kerdi walk-in shower with a hand-glazed encaustic floor and small-format wall tile in a soft sage, ran an external exhaust vent, and used a wall-hung walnut floating vanity that didn't fight the home's vintage. Brass fixtures throughout. The bathroom now performs to current standards but still feels like it belongs in an 1880s home.",
+      ],
+      spec: [
+        { label: "Bathroom size", value: "7×9 ft" },
+        { label: "Active build", value: "6 weeks (encaustic tile + careful demo)" },
+        { label: "Permits", value: "Pulled with City of Nevada City" },
+        { label: "Notable scope", value: "Heritage-aware tile + plumbing + venting" },
+      ],
+    },
+    expectLocally: {
+      title: "What to expect locally — Nevada City",
+      intro:
+        "Nevada City projects need real care. Here's what's specific:",
+      items: [
+        {
+          label: "Drive time",
+          body: "About 35 minutes from our Auburn shop via Highway 49. We bundle Nevada City days into longer on-site stretches so drive overhead is amortized.",
+        },
+        {
+          label: "Permits",
+          body: "City of Nevada City Building Department. Homes inside the historic district may also require Historic Preservation Commission review for exterior changes; interior bathroom remodels generally don't, but we confirm at consultation.",
+        },
+        {
+          label: "Water",
+          body: "Nevada Irrigation District for nearly all homes — predictable pressure, standard chemistry.",
+        },
+        {
+          label: "What's commonly hidden",
+          body: "Old Victorian-era bathrooms commonly have failed waterproofing under tile, original galvanized supply, and venting that doesn't go outside. We plan for those during design and carry contingency budget so demo day doesn't surprise anyone.",
+        },
+      ],
+    },
   },
 ];
 

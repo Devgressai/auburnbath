@@ -184,6 +184,168 @@ export default function Page() {
         title="A bathroom remodel that's clear from day one."
       />
 
+      <section className="py-16 bg-sage-light/45">
+        <Container>
+          <SectionHeading
+            eyebrow="Anatomy of an Auburn bathroom remodel"
+            title="What actually happens, week by week."
+            description="Most homeowners want to know what their bathroom will look like Week 1, Week 3, and Week 5. Here's the rough cadence we run on a typical full primary bath remodel."
+          />
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                week: "Pre-build",
+                title: "Design lock + material order",
+                body:
+                  "Selections finalized, drawings stamped, permits submitted, and long-lead materials (custom glass, certain tile, vanity carcasses) ordered. Nothing happens on site until materials are on order.",
+              },
+              {
+                week: "Week 1",
+                title: "Demo + rough plumbing/electrical",
+                body:
+                  "Floor protection, dust barriers, and a tidy job site go up first. Demo happens in 2–3 days. Plumber and electrician follow with rough-ins for the new layout. Subfloor and framing condition gets documented.",
+              },
+              {
+                week: "Week 2",
+                title: "Waterproofing + first inspection",
+                body:
+                  "Bonded membrane goes on the shower walls and pan. Plumbing, electrical, and framing inspections happen this week. Tile substrate gets prepped while we wait on inspection sign-offs.",
+              },
+              {
+                week: "Week 3",
+                title: "Tile setting",
+                body:
+                  "Walls, then floor, then shower pan. Large-format porcelain takes more layout time but goes faster than mosaic. Niches, accents, and trim details get set last. Grout cures over the weekend before sealing.",
+              },
+              {
+                week: "Week 4",
+                title: "Vanity, glass, fixtures",
+                body:
+                  "Vanity install, plumbing trim out, glass installer measures and templates (the actual glass arrives 7–10 days later). Lighting, mirror, hardware, accessories. Grout sealed.",
+              },
+              {
+                week: "Week 5",
+                title: "Glass, punch list, final walkthrough",
+                body:
+                  "Frameless glass goes in. Final clean. Punch list walk with the homeowner — we mark anything that needs a return touch. Documented written handoff with maintenance notes for tile, grout, and finishes.",
+              },
+            ].map((item) => (
+              <article key={item.title} className="card p-6">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-forest">
+                  {item.week}
+                </span>
+                <h3 className="mt-3 font-display text-lg text-soft-black">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  {item.body}
+                </p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-10 mx-auto max-w-2xl text-center text-sm leading-7 text-muted">
+            This is the canonical 5-week cadence. Smaller projects (a
+            shower-only remodel, a tub-to-shower conversion) run shorter;
+            larger ones with custom glass, slab tile, or significant
+            plumbing rework run longer. Either way, you get the schedule
+            in writing before demo starts.
+          </p>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Permits & code"
+              title="What's required by Placer County."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <p>
+              Most Auburn-area bathroom remodels require permits. The
+              short version: if you're moving plumbing, changing
+              electrical, or modifying structure, the work is
+              permittable. Even simpler tile-and-fixture refreshes can
+              require a plumbing permit when valves are replaced.
+            </p>
+            <p>
+              We pull permits with the appropriate jurisdiction —{" "}
+              <strong>Placer County Building Department</strong> for the
+              unincorporated areas (most of Auburn-area outside the city
+              of Auburn proper), the <strong>City of Auburn Building
+              Division</strong> for projects inside city limits, and the
+              respective city departments for Colfax, Loomis, and
+              elsewhere. We also coordinate inspections at the right
+              points in the build (rough plumbing, rough electrical,
+              shower pan, framing, final).
+            </p>
+            <p>
+              Why it matters: permitted work is documented, inspected,
+              and protected during a future home sale. Buyers'
+              inspectors look for unpermitted bathroom work specifically
+              — it's one of the most common contingencies that
+              renegotiates a sale price. Doing it right the first time
+              protects the investment.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 bg-sand">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Timing realities"
+              title="What controls the schedule."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <p>
+              Material lead times are the most common reason a bathroom
+              remodel runs longer than the homeowner expected. We share
+              these realistic ranges up front so the schedule doesn't
+              surprise anyone.
+            </p>
+            <ul>
+              <li>
+                <strong>Custom frameless glass:</strong> measure-to-install
+                is typically 2–3 weeks. We measure once tile is set and
+                cured, so the glass usually arrives near the end of the
+                build.
+              </li>
+              <li>
+                <strong>Imported or large-format slab tile:</strong> can
+                be 4–8 weeks from order. We order at design lock so this
+                doesn't push the build start.
+              </li>
+              <li>
+                <strong>Custom-built vanities (rift oak, walnut):</strong>{" "}
+                typically 4–6 weeks. Stock cabinetry is faster but
+                rarely the right material match for a high-end remodel.
+              </li>
+              <li>
+                <strong>Specialty fixtures and finishes:</strong> some
+                Brizo, Rohl, and California Faucets lines are 6–10 weeks
+                in popular finishes. We confirm availability before
+                spec-ing them.
+              </li>
+              <li>
+                <strong>Inspections:</strong> Placer County typically
+                schedules inspections within a few business days. Rare
+                delays during peak permit volume; we plan a buffer.
+              </li>
+            </ul>
+            <p>
+              In practice: most full primary-bath remodels run 4–6 weeks
+              of active build after demo. We commit to a written schedule
+              before starting and update it weekly so you always know
+              where the project stands.
+            </p>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading

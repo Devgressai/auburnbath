@@ -138,6 +138,117 @@ export default function Page() {
         </Container>
       </section>
 
+      <section className="py-16 bg-sage-light/45">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Materials & systems we use"
+              title="What makes a curbless walk-in actually work."
+              description="The systems and materials we default to for walk-in showers — these decide whether the floor stays level and the water stays in the shower."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <h3>Recessed subfloor + tray</h3>
+            <p>
+              Curbless walk-ins need the shower floor recessed below the
+              surrounding bathroom floor so the slope to the drain
+              actually moves water. Our default: cut down the subfloor by
+              1.5–2&Prime; over the shower footprint, sister joists where
+              needed, and set a <strong>Schluter Kerdi-Shower ST</strong>{" "}
+              pre-sloped tray. For low-threshold (non-curbless) builds we
+              pour a sloped mud bed.
+            </p>
+            <h3>Waterproofing</h3>
+            <p>
+              <strong>Schluter Kerdi</strong> bonded sheet membrane on
+              walls, pan, and curb (when present), with corner pieces and
+              proper drain-flange integration. Where a sheet membrane
+              isn't practical, <strong>Hydro Ban</strong> or{" "}
+              <strong>RedGard</strong> liquid-applied at full
+              manufacturer mil thickness with two coats minimum and full
+              corner detailing.
+            </p>
+            <h3>Linear drain</h3>
+            <p>
+              <strong>Schluter Kerdi-Line</strong> with a tile-in cover so
+              the floor reads as a continuous tile plane. Wall-side
+              placement (against the back wall) typically gives the
+              cleanest visual; center-line placement works when the
+              layout calls for it. <strong>Infinity Drain</strong> for
+              high-end specifications where a specific finish needs to
+              match.
+            </p>
+            <h3>Glass — sizing matters</h3>
+            <p>
+              <strong>3/8&Prime; low-iron glass</strong> for fixed panels
+              up to about 36&Prime; wide; <strong>1/2&Prime;</strong> for
+              wider panels and door spans. Frameless is our default.
+              Hinges by <strong>CRL</strong> or equivalent. We seal
+              vertical glass-to-tile transitions with clear silicone
+              rather than relying on gravity alone.
+            </p>
+            <h3>Fixtures + benches</h3>
+            <p>
+              <strong>Brizo</strong>, higher-tier{" "}
+              <strong>Kohler</strong>, <strong>California Faucets</strong>,{" "}
+              <strong>Riobel</strong>, or <strong>Rohl</strong> for
+              valves and trim. Built-in benches: framed in pressure-
+              treated lumber, bonded with the same membrane system as
+              the walls and pan, tiled to match.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="What can go wrong"
+              title="Why most curbless walk-ins fail."
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            <p>
+              Curbless walk-ins are the most-elegant shower style and
+              also the most-failure-prone when poorly built. The same
+              issues come up over and over in failed installs.
+            </p>
+            <ul>
+              <li>
+                <strong>Subfloor not recessed.</strong> If the shower
+                floor isn't physically lower than the surrounding floor,
+                slope alone can't move water — it pools and migrates
+                under the tile.
+              </li>
+              <li>
+                <strong>Drain undersized for shower flow rate.</strong>{" "}
+                A 2&Prime; drain works for most standard heads; high-
+                flow rain heads or two-shower setups need a properly
+                sized linear drain so water doesn't back up.
+              </li>
+              <li>
+                <strong>Glass panels sized too thin.</strong> 1/4&Prime;
+                glass on a wide panel flexes, fails seals at hinges, and
+                eventually breaks. We won't spec under 3/8&Prime; on
+                anything load-bearing.
+              </li>
+              <li>
+                <strong>Threshold transition not waterproofed.</strong>{" "}
+                The transition between shower floor and bathroom floor
+                is where most curbless leaks start. The membrane has to
+                continue under the threshold tile.
+              </li>
+              <li>
+                <strong>Bench framing not waterproofed.</strong> A
+                built-in bench is essentially a horizontal niche — it
+                needs membrane on every face, not just the top.
+              </li>
+            </ul>
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16">
         <Container>
           <SectionHeading

@@ -94,6 +94,80 @@ export function CityPage({ city }: { city: City }) {
         </Container>
       </section>
 
+      {/* Architecture / housing-stock notes */}
+      <section className="py-20 sm:py-24 bg-sand">
+        <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              eyebrow="Housing stock"
+              title={city.architectureNotes.title}
+            />
+          </div>
+          <div className="prose-local lg:col-span-7">
+            {city.architectureNotes.paragraphs.map((p, idx) => (
+              <p key={idx}>{p}</p>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Project example / walkthrough */}
+      <section className="py-20 sm:py-24">
+        <Container>
+          <SectionHeading
+            eyebrow="Project example"
+            title={city.projectExample.title}
+            description={city.projectExample.summary}
+          />
+          <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="prose-local lg:col-span-7">
+              {city.projectExample.paragraphs.map((p, idx) => (
+                <p key={idx}>{p}</p>
+              ))}
+            </div>
+            <aside className="lg:col-span-5">
+              <div className="card p-6">
+                <span className="eyebrow">Project spec</span>
+                <dl className="mt-5 divide-y divide-line/70">
+                  {city.projectExample.spec.map((row) => (
+                    <div
+                      key={row.label}
+                      className="flex items-start justify-between gap-4 py-3 text-sm"
+                    >
+                      <dt className="text-muted">{row.label}</dt>
+                      <dd className="text-right font-medium text-soft-black">
+                        {row.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </aside>
+          </div>
+        </Container>
+      </section>
+
+      {/* What to expect locally */}
+      <section className="py-20 sm:py-24 bg-sage-light/45">
+        <Container>
+          <SectionHeading
+            eyebrow="Local realities"
+            title={city.expectLocally.title}
+            description={city.expectLocally.intro}
+          />
+          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {city.expectLocally.items.map((it) => (
+              <li key={it.label} className="card p-6 flex flex-col gap-2.5">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-forest">
+                  {it.label}
+                </span>
+                <p className="text-sm leading-6 text-charcoal">{it.body}</p>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
       {/* Featured services */}
       {featured.length > 0 ? (
         <section className="py-20 bg-sand">
