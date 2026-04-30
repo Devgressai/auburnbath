@@ -56,7 +56,6 @@ export default function Page() {
         description="Custom walk-in shower installation across Auburn and the Placer County foothills — clean lines, durable waterproofing, and a calm, premium feel."
         imageSlug="walkin-hero"
         imageAlt="Walk-in shower in Auburn, CA — curbless sage stone tile floor, linear drain, frameless glass enclosure, and rain-head shower fixture"
-        imageCaption="Curbless walk-in shower, Auburn primary bath"
       />
 
       <section className="py-16">
@@ -105,7 +104,6 @@ export default function Page() {
           <ImagePlaceholder
             slug="walkin-curbless"
             alt="Curbless walk-in shower with frameless glass, linear drain, and large-format sage stone tile in an Auburn, CA primary bathroom"
-            caption="Curbless walk-in, primary bath"
             ratio="5/4"
             tone="forest"
           />

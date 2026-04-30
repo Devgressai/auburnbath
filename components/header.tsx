@@ -20,19 +20,22 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/70 bg-cream/85 backdrop-blur-md supports-[backdrop-filter]:bg-cream/65">
-      <Container className="flex h-16 items-center justify-between gap-6 lg:h-[72px]">
+    <header className="sticky top-0 z-40 bg-forest-dark text-cream/95">
+      <Container className="flex h-16 items-center justify-between gap-4 lg:h-[72px] lg:gap-6">
         <Link
           href="/"
           aria-label="Auburn Bath — Home"
           className="group flex items-center gap-2.5"
         >
-          <LogoMark className="h-9 w-9 transition-transform group-hover:rotate-[-4deg]" />
+          <LogoMark
+            tone="light"
+            className="h-9 w-9 transition-transform group-hover:rotate-[-4deg]"
+          />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-medium tracking-tight text-soft-black">
+            <span className="font-display text-lg font-medium tracking-tight text-cream">
               Auburn Bath
             </span>
-            <span className="hidden sm:inline text-[10px] font-medium uppercase tracking-[0.18em] text-muted">
+            <span className="hidden xl:inline text-[10px] font-medium uppercase tracking-[0.2em] text-cream/55">
               Bathroom Remodeling · Auburn, CA
             </span>
           </span>
@@ -40,13 +43,13 @@ export function Header() {
 
         <nav
           aria-label="Primary"
-          className="hidden lg:flex items-center gap-6 text-sm"
+          className="hidden lg:flex items-center gap-5 text-sm xl:gap-7"
         >
           {navLinks.slice(0, -1).map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-charcoal/85 hover:text-forest transition-colors"
+              className="whitespace-nowrap text-cream/85 hover:text-cream transition-colors"
             >
               {link.label}
             </Link>
@@ -56,7 +59,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-4 text-sm">
           <a
             href={site.phoneHref}
-            className="inline-flex items-center gap-1.5 text-charcoal hover:text-forest transition-colors"
+            className="hidden xl:inline-flex items-center gap-1.5 whitespace-nowrap text-stone-warm hover:text-cream transition-colors"
             aria-label={`Call ${site.name}`}
           >
             <svg
@@ -65,7 +68,7 @@ export function Header() {
               fill="none"
               stroke="currentColor"
               strokeWidth="1.6"
-              className="h-3.5 w-3.5 text-forest"
+              className="h-3.5 w-3.5"
               aria-hidden
             >
               <path
@@ -76,14 +79,17 @@ export function Header() {
             </svg>
             {site.phone}
           </a>
-          <Link href="/contact" className="btn btn-primary">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-stone-warm px-5 py-2.5 text-sm font-medium text-soft-black hover:bg-cream hover:text-forest-dark transition-colors"
+          >
             Get Free Quote
           </Link>
         </div>
 
         <button
           type="button"
-          className="lg:hidden inline-flex items-center justify-center rounded-full border border-line/80 p-2 text-charcoal hover:bg-sage-light transition-colors"
+          className="lg:hidden inline-flex items-center justify-center rounded-full border border-cream/30 p-2 text-cream/95 hover:bg-cream/10 transition-colors"
           aria-label="Open menu"
           aria-expanded={open}
           onClick={() => setOpen(true)}
@@ -107,11 +113,11 @@ export function Header() {
       </Container>
 
       {open ? (
-        <div className="lg:hidden fixed inset-0 z-50 flex flex-col bg-cream">
-          <div className="flex h-16 items-center justify-between border-b border-line/70 px-5">
+        <div className="lg:hidden fixed inset-0 z-50 flex flex-col bg-forest-dark text-cream">
+          <div className="flex h-16 items-center justify-between border-b border-cream/15 px-5">
             <div className="flex items-center gap-2.5">
-              <LogoMark className="h-9 w-9" />
-              <span className="font-display text-lg font-medium tracking-tight text-soft-black">
+              <LogoMark tone="light" className="h-9 w-9" />
+              <span className="font-display text-lg font-medium tracking-tight text-cream">
                 Auburn Bath
               </span>
             </div>
@@ -119,7 +125,7 @@ export function Header() {
               type="button"
               aria-label="Close menu"
               onClick={() => setOpen(false)}
-              className="inline-flex items-center justify-center rounded-full border border-line/80 p-2 text-charcoal hover:bg-sage-light transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-cream/30 p-2 text-cream hover:bg-cream/10 transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -147,20 +153,23 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3.5 text-charcoal hover:bg-sage-light transition-colors"
+                className="rounded-lg px-3 py-3.5 text-cream/90 hover:bg-cream/10 transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-          <div className="mt-auto flex flex-col gap-3 border-t border-line/70 p-5">
-            <a href={site.phoneHref} className="btn btn-secondary">
+          <div className="mt-auto flex flex-col gap-3 border-t border-cream/15 p-5">
+            <a
+              href={site.phoneHref}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/35 px-5 py-3 text-sm font-medium text-cream hover:bg-cream/10 transition-colors"
+            >
               Call {site.phone}
             </a>
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="btn btn-primary"
+              className="inline-flex items-center justify-center rounded-full bg-stone-warm px-5 py-3 text-sm font-medium text-soft-black hover:bg-cream transition-colors"
             >
               Get Free Quote
             </Link>

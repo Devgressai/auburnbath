@@ -1,15 +1,9 @@
-import Link from "next/link";
-
-import { Container } from "@/components/container";
-import { CTASection } from "@/components/cta-section";
-import { FAQSection } from "@/components/faq-section";
 import { Hero } from "@/components/hero";
-import { ProcessSteps } from "@/components/process-steps";
-import { SectionHeading } from "@/components/section-heading";
-import { ServiceAreasGrid } from "@/components/service-areas";
+import { HomeCredentials } from "@/components/home-credentials";
+import { HomeFaqCta } from "@/components/home-faq-cta";
+import { HomeInfoRow } from "@/components/home-info-row";
 import { ServicesOverview } from "@/components/services-overview";
-import { TrustBar } from "@/components/trust-bar";
-import { WhyUs } from "@/components/why-us";
+import { WeSpecialize } from "@/components/we-specialize";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -22,7 +16,7 @@ export const metadata = buildMetadata({
 const homeFaqs = [
   {
     q: "How much does a bathroom remodel cost in Auburn, CA?",
-    a: "Most Auburn bathroom remodels fall into a wide range depending on size, layout changes, plumbing work, tile selection, and finish level. Smaller refresh projects come in lower; full primary-bath rebuilds with custom showers, tile, vanities, and lighting come in higher. We share clear, line-item pricing during your consultation rather than a one-size-fits-all number.",
+    a: "Most Auburn bathroom remodels fall into a wide range depending on size, layout changes, plumbing work, tile selection, and finish level. Tub-to-shower conversions tend to start lower; full primary bathroom rebuilds with custom showers, tile, vanities, and lighting come in higher. We share clear, line-item pricing during your free consultation.",
   },
   {
     q: "Do you offer tub-to-shower conversions?",
@@ -46,64 +40,19 @@ export default function Home() {
   return (
     <>
       <Hero
-        eyebrow="Auburn, CA"
+        eyebrow="Bathroom Remodeling Specialists"
         title="Bathroom Remodeling in Auburn, CA"
         description="Custom bathroom remodels, walk-in showers, shower upgrades, and tub-to-shower conversions built for Auburn and Placer County homes — calm, durable, and quietly premium."
         imageSlug="home-hero"
         imageAlt="Bathroom remodeling in Auburn, CA — primary bathroom with sage stone tile shower, freestanding soaker tub, and rift oak vanity"
-        imageCaption="Auburn primary bath, foothill spa palette"
+        showTrustPillars
+        showConsultCard
       />
-      <TrustBar />
+      <WeSpecialize />
       <ServicesOverview />
-      <WhyUs />
-      <LocalSection />
-      <ProcessSteps />
-      <ServiceAreasGrid />
-      <FAQSection items={homeFaqs} />
-      <CTASection
-        title="Plan your Auburn bathroom remodel with a focused local crew."
-        description="Tell us about your space — size, layout, what's working, what isn't — and we'll come back with a clear next step. No pressure, no boilerplate."
-      />
+      <HomeInfoRow />
+      <HomeCredentials />
+      <HomeFaqCta items={homeFaqs} />
     </>
-  );
-}
-
-function LocalSection() {
-  return (
-    <section className="py-20 bg-sage-light">
-      <Container className="grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <SectionHeading
-            eyebrow="Auburn-built bathrooms"
-            title="Designed around foothill homes, not generic floor plans."
-            description="Auburn's homes range from gold-rush originals to mid-century ranches and newer hillside builds. Each one approaches bathrooms differently, and the smartest remodels start with that context."
-          />
-        </div>
-        <div className="prose-local lg:col-span-7">
-          <p>
-            We see a lot of older floor plans where the original bathroom was
-            never really designed — it was simply <em>fit in</em>. Tubs end up
-            in awkward corners, showers feel cramped, and ventilation often
-            wasn't on the radar when the home was built. A good remodel
-            doesn't just swap finishes; it quietly reorganizes the room so it
-            works better every day.
-          </p>
-          <p>
-            On the materials side, foothill homes face their own conditions:
-            warm, dry summers, real winter humidity, well water in some
-            pockets, and plenty of dust during fire-season cleanup. We choose
-            tile, grout, hardware, and finishes that hold up to all of that —
-            and look the part of a home set into the trees, not a developer
-            spec home in a flat suburb.
-          </p>
-          <p>
-            Our work leans calm: green and sage tones, warm stone, real wood,
-            soft glass, and quiet hardware. It pairs naturally with Auburn's
-            landscape and ages well. <Link href="/about">Learn more about
-            Auburn Bath</Link>.
-          </p>
-        </div>
-      </Container>
-    </section>
   );
 }

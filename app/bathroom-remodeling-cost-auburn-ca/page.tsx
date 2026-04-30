@@ -54,7 +54,6 @@ export default function Page() {
         description="A practical, local breakdown of what bathroom remodels actually cost in Auburn — what drives pricing, what doesn't, and how to plan a project that fits your home."
         imageSlug="cost-hero"
         imageAlt="Bathroom remodeling cost planning samples for Auburn, CA — sage stone tile, rift oak wood block, honed quartz counter, and brass and matte black faucet handles"
-        imageCaption="Auburn bathroom remodel material samples"
       />
 
       <article className="py-16">

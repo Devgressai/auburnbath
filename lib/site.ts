@@ -183,3 +183,127 @@ export const trustPoints = [
   "Clean job sites, on-site protection, and a documented final walkthrough",
   `Local Placer County crew, backed by ${site.parent}`,
 ];
+
+/**
+ * Compact pillars rendered in the hero trust strip and elsewhere.
+ * Subtitle should never invent a number — it's a positioning line.
+ */
+export const heroTrustPillars: Array<{
+  title: string;
+  subtitle: string;
+  iconKey: "specialty" | "license" | "parent" | "foothill";
+}> = [
+  {
+    title: "Bathroom-Only Specialists",
+    subtitle: "Focused, not generalist",
+    iconKey: "specialty",
+  },
+  {
+    title: "Licensed & Insured",
+    subtitle: `CA #${site.license}`,
+    iconKey: "license",
+  },
+  {
+    title: `Backed by ${site.parent}`,
+    subtitle: "Local parent brand",
+    iconKey: "parent",
+  },
+  {
+    title: "Foothill-Specialized",
+    subtitle: "Auburn-trained crew",
+    iconKey: "foothill",
+  },
+];
+
+/**
+ * Six-card service grid used on the homepage. The four primary services
+ * route to dedicated SEO pages; "Small Bathroom Remodels" and "Master
+ * Bathroom Remodels" are sub-categories of bathroom remodeling — they
+ * link to anchored sections on the main bathroom-remodeling page until
+ * we promote them to dedicated pages.
+ */
+export const homeServiceTiles: Array<{
+  title: string;
+  href: string;
+  blurb: string;
+  imageSlug: string;
+}> = [
+  {
+    title: "Bathroom Remodeling",
+    href: "/bathroom-remodeling-auburn-ca",
+    blurb:
+      "Full bathroom remodels tailored to Auburn homes — layout, plumbing, tile, lighting, and finish.",
+    imageSlug: "bath-hero",
+  },
+  {
+    title: "Shower Remodeling",
+    href: "/shower-remodeling-auburn-ca",
+    blurb:
+      "Custom tile showers, frameless glass, niches, benches, and durable waterproofing.",
+    imageSlug: "shower-hero",
+  },
+  {
+    title: "Tub-to-Shower Conversions",
+    href: "/tub-to-shower-conversion-auburn-ca",
+    blurb:
+      "Replace an unused tub with a clean walk-in shower designed for daily use.",
+    imageSlug: "tub-hero",
+  },
+  {
+    title: "Walk-In Showers",
+    href: "/walk-in-showers-auburn-ca",
+    blurb:
+      "Curbless and low-threshold walk-in showers with frameless glass and stone tile.",
+    imageSlug: "walkin-hero",
+  },
+  {
+    title: "Small Bathroom Remodels",
+    href: "/bathroom-remodeling-auburn-ca",
+    blurb:
+      "Smart layouts, calmer lighting, and durable finishes for compact Auburn baths.",
+    imageSlug: "shower-stone",
+  },
+  {
+    title: "Primary Bathroom Remodels",
+    href: "/bathroom-remodeling-auburn-ca",
+    blurb:
+      "Full primary bath rebuilds — double vanities, walk-in showers, freestanding tubs, and tile.",
+    imageSlug: "bath-primary",
+  },
+];
+
+/**
+ * Pricing-preview tiles for the homepage. Ranges are intentionally
+ * broad and flagged as starting numbers; final pricing always depends
+ * on layout, plumbing, materials, waterproofing, and project scope.
+ */
+export const pricingPreview: Array<{ label: string; range: string }> = [
+  { label: "Tub-to-Shower Conversions", range: "Starting around $9,500" },
+  { label: "Shower Remodels", range: "Starting around $11,500" },
+  { label: "Small Bathroom Remodels", range: "Starting around $14,000" },
+  { label: "Full Bathroom Remodels", range: "Starting around $22,000" },
+  { label: "Primary Bathroom Remodels", range: "Starting around $35,000" },
+];
+
+/**
+ * Specialty trust grid (next to the "We Specialize in Bathrooms"
+ * section). Pure positioning — no fabricated numbers.
+ */
+export const specialtyPillars: Array<{ title: string; subtitle: string }> = [
+  {
+    title: "Better Craftsmanship",
+    subtitle: "Tile, waterproofing, and trim done by people who do this every day.",
+  },
+  {
+    title: "Smarter Solutions",
+    subtitle: "Layout, ventilation, and material choices that fit foothill homes.",
+  },
+  {
+    title: "Cleaner Process",
+    subtitle: "On-site protection, weekly check-ins, no surprise add-ons.",
+  },
+  {
+    title: "Documented Walkthrough",
+    subtitle: "We finish with a written handoff — easy reference for years.",
+  },
+];

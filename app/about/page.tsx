@@ -54,7 +54,6 @@ export default function Page() {
         description="A local bathroom remodeling brand built around one idea: bathrooms deserve a focused approach, not the generalist treatment most contractors give them."
         imageSlug="about-hero"
         imageAlt="Auburn Bath bathroom remodel crew installing sage stone tile in an Auburn, CA foothill home primary bathroom"
-        imageCaption="On-site, Auburn foothills"
       />
 
       <section className="py-16">
@@ -101,7 +100,6 @@ export default function Page() {
             ratio="3/4"
             tone="forest"
             className="lg:col-span-5"
-            caption="Local crew, foothill homes"
           />
         </Container>
       </section>

@@ -56,7 +56,6 @@ export default function Page() {
         description="Replace an outdated or unused tub with a clean, modern walk-in shower. Built for Auburn primary baths, guest bathrooms, and aging-in-place upgrades."
         imageSlug="tub-hero"
         imageAlt="Tub-to-shower conversion in Auburn, CA — primary bathroom rebuilt with sage stone tile, low threshold, and frameless glass walk-in shower"
-        imageCaption="Tub-to-shower conversion, Auburn primary bath"
       />
 
       <section className="py-16">
@@ -99,7 +98,6 @@ export default function Page() {
           <ImagePlaceholder
             slug="tub-conversion"
             alt="Low-threshold tub-to-shower conversion in Auburn, CA with sage stone tile, built-in shower bench, and frameless glass door"
-            caption="Low-threshold conversion, foothill home"
             ratio="5/4"
             tone="sage"
           />
