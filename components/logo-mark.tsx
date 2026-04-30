@@ -1,14 +1,15 @@
 import { cn } from "@/lib/cn";
 
 /**
- * Auburn Bath emblem — water drop nestled into a foothill ridge.
+ * Auburn Bath emblem — water drop above a single foothill ridge.
  *
- * - `tone="dark"`  (default): cream disc with forest details — for
- *   light backgrounds (footer, fallback).
- * - `tone="light"`: discless mark rendered directly on a dark surface,
- *   with a stone-warm highlight on the drop. Used on the dark header
- *   so the lockup reads as part of the bar instead of a pasted-on
- *   sticker.
+ * - `tone="light"`: discless mark for dark surfaces (header). Sage
+ *   ridge silhouette + cream drop with a stone-warm gleam.
+ * - `tone="dark"` (default): cream disc with forest details — for
+ *   light backgrounds (footer, fallbacks).
+ *
+ * Kept deliberately simple at small sizes: one ridge, one drop,
+ * one accent. Reads cleanly at 40px.
  */
 export function LogoMark({
   className,
@@ -28,55 +29,51 @@ export function LogoMark({
         aria-label={ariaLabel ?? "Auburn Bath emblem"}
         className={cn("inline-block shrink-0 overflow-visible", className)}
       >
-        {/* Subtle ground halo so the mark doesn't feel detached. */}
-        <ellipse
-          cx="20"
-          cy="34"
-          rx="15"
-          ry="2"
-          fill="#7a9e8e"
-          opacity="0.18"
-        />
-        {/* Foothill ridge — softly glowing sage */}
+        <defs>
+          <radialGradient
+            id="abDropInner"
+            cx="0.32"
+            cy="0.28"
+            r="0.78"
+          >
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+            <stop offset="60%" stopColor="#e7efea" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Single foothill silhouette — soft Q-curve, sage on dark */}
         <path
-          d="M3 27 L11 19 L17 24 L23 18 L30 25 L37 22 L37 33 L3 33 Z"
+          d="M2 30 Q 11 22 19 26 Q 27 30 38 23 L 38 39 L 2 39 Z"
           fill="#7a9e8e"
           opacity="0.55"
         />
+        {/* Subtle highlight band along the ridge crest */}
         <path
-          d="M3 29.5 L10 24 L16 27 L23 22 L30 28 L37 25 L37 33.5 L3 33.5 Z"
-          fill="#e7efea"
-          opacity="0.32"
+          d="M2 30 Q 11 22 19 26 Q 27 30 38 23"
+          stroke="#e7efea"
+          strokeWidth="0.6"
+          fill="none"
+          opacity="0.45"
         />
-        {/* Water drop in cream — slightly larger for confidence */}
+
+        {/* Cream water drop */}
         <path
-          d="M20 5 C 23.2 9.5, 26 13.4, 26 17 a 6 6 0 1 1 -12 0 c 0 -3.6, 2.8 -7.5, 6 -12 Z"
+          d="M20 4.5 C 23.6 9.5, 26.5 13.6, 26.5 17.4 a 6.5 6.5 0 1 1 -13 0 c 0 -3.8, 2.9 -7.9, 6.5 -12.9 Z"
           fill="#fafaf7"
         />
-        {/* Soft inner gradient to give the drop dimension */}
+        {/* Soft inner highlight */}
         <path
-          d="M20 5 C 23.2 9.5, 26 13.4, 26 17 a 6 6 0 1 1 -12 0 c 0 -3.6, 2.8 -7.5, 6 -12 Z"
-          fill="url(#abLightInner)"
-          opacity="0.6"
+          d="M20 4.5 C 23.6 9.5, 26.5 13.6, 26.5 17.4 a 6.5 6.5 0 1 1 -13 0 c 0 -3.8, 2.9 -7.9, 6.5 -12.9 Z"
+          fill="url(#abDropInner)"
+          opacity="0.85"
         />
-        {/* Stone-warm highlight glint near the drop's top-left */}
-        <circle cx="17.6" cy="11.5" r="1.05" fill="#c8a973" opacity="0.85" />
-        <defs>
-          <radialGradient
-            id="abLightInner"
-            cx="0.35"
-            cy="0.35"
-            r="0.7"
-          >
-            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
-            <stop offset="65%" stopColor="#e7efea" stopOpacity="0.0" />
-          </radialGradient>
-        </defs>
+        {/* Stone-warm gleam — single confident dot */}
+        <circle cx="17" cy="11.5" r="1.2" fill="#c8a973" opacity="0.92" />
       </svg>
     );
   }
 
-  // Dark variant — cream disc, forest details (used on light surfaces).
+  // Dark variant — cream disc, forest details (light surfaces).
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -106,14 +103,7 @@ export function LogoMark({
         d="M20 8.5 C 22.6 12.4, 25 15.2, 25 18 a 5 5 0 1 1 -10 0 c 0 -2.8, 2.4 -5.6, 5 -9.5 Z"
         fill="#2f5d50"
       />
-      <path
-        d="M18.5 13 C 17.5 14.6, 16.8 15.8, 16.8 17"
-        stroke="#7a9e8e"
-        strokeWidth="1"
-        strokeLinecap="round"
-        fill="none"
-        opacity="0.7"
-      />
+      <circle cx="17.6" cy="13.4" r="0.95" fill="#c8a973" opacity="0.85" />
     </svg>
   );
 }
