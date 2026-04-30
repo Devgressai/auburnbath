@@ -60,19 +60,36 @@ export function Hero({
             </a>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs text-muted">
-            {site.trustLine.split("|").map((piece, idx) => (
-              <span key={idx} className="inline-flex items-center gap-2">
-                {idx > 0 ? (
-                  <span
-                    aria-hidden
-                    className="h-1 w-1 rounded-full bg-sage/70"
-                  />
-                ) : null}
-                <span className="leading-5">{piece.trim()}</span>
-              </span>
+          <ul className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-charcoal">
+            {[
+              "Free in-home consultation",
+              "Line-item written estimate",
+              "No pressure, no obligation",
+            ].map((item) => (
+              <li key={item} className="inline-flex items-center gap-2">
+                <span
+                  aria-hidden
+                  className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-stone-warm/25 text-forest-dark"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.4"
+                    className="h-3 w-3"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m4.5 12.75 6 6 9-13.5"
+                    />
+                  </svg>
+                </span>
+                {item}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         <div className="lg:col-span-6 xl:col-span-5">

@@ -1,8 +1,12 @@
 import { Hero } from "@/components/hero";
+import { HomeAvailability } from "@/components/home-availability";
 import { HomeCredentials } from "@/components/home-credentials";
 import { HomeFaqCta } from "@/components/home-faq-cta";
+import { HomeGallery } from "@/components/home-gallery";
 import { HomeInfoRow } from "@/components/home-info-row";
 import { HomeOakwoodTrust } from "@/components/home-oakwood-trust";
+import { HomeStatement } from "@/components/home-statement";
+import { HomeStats } from "@/components/home-stats";
 import { ServicesOverview } from "@/components/services-overview";
 import { TrustRibbon } from "@/components/trust-ribbon";
 import { WeSpecialize } from "@/components/we-specialize";
@@ -39,7 +43,7 @@ const homeFaqs = [
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Auburn Bath operates as a bathroom remodeling service brand of Oakwood Remodeling Group, a licensed California contractor. License details are available on request and listed in our footer.",
+    a: "Yes. Auburn Bath operates as a bathroom remodeling service brand of Oakwood Remodeling Group, a licensed California contractor (CA #1125321). License details are available on request and listed in our footer.",
   },
 ];
 
@@ -47,7 +51,7 @@ export default function Home() {
   return (
     <>
       <Hero
-        eyebrow="Bathroom Remodeling Specialists"
+        eyebrow="Bathroom Remodeling Specialists · Auburn, CA"
         title="Bathroom Remodeling in Auburn, CA"
         description="Custom bathroom remodels, walk-in showers, shower upgrades, and tub-to-shower conversions built for Auburn and Placer County homes — calm, durable, and quietly premium."
         imageSlug="home-hero"
@@ -55,9 +59,13 @@ export default function Home() {
         showConsultCard
       />
       <TrustRibbon />
+      <HomeStats />
+      <HomeGallery />
       <WeSpecialize />
       <ServicesOverview />
+      <HomeStatement />
       <HomeInfoRow />
+      <HomeAvailability />
       <HomeCredentials />
       <HomeFaqCta items={homeFaqs} />
       <HomeOakwoodTrust />
