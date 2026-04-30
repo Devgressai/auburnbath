@@ -1,15 +1,16 @@
 import { cn } from "@/lib/cn";
 
 /**
- * Auburn Bath emblem — water drop above a single foothill ridge.
+ * Auburn Bath emblem — water drop above a foothill ridge, set inside
+ * a thin seal ring. Custom inline SVG, vector, scales perfectly at
+ * any size, ships at <2KB.
  *
- * - `tone="light"`: discless mark for dark surfaces (header). Sage
- *   ridge silhouette + cream drop with a stone-warm gleam.
- * - `tone="dark"` (default): cream disc with forest details — for
- *   light backgrounds (footer, fallbacks).
- *
- * Kept deliberately simple at small sizes: one ridge, one drop,
- * one accent. Reads cleanly at 40px.
+ * Two tones:
+ *  - `tone="light"` (used on dark headers) — cream drop on transparent
+ *    field, sage gradient ridge, thin sage outer seal, stone-warm
+ *    gleam + soft halo.
+ *  - `tone="dark"` (default — used on light surfaces) — cream disc
+ *    background, forest details inside.
  */
 export function LogoMark({
   className,
@@ -24,51 +25,99 @@ export function LogoMark({
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 40 40"
+        viewBox="0 0 44 44"
         role="img"
         aria-label={ariaLabel ?? "Auburn Bath emblem"}
         className={cn("inline-block shrink-0 overflow-visible", className)}
       >
         <defs>
           <radialGradient
-            id="abDropInner"
-            cx="0.32"
-            cy="0.28"
-            r="0.78"
+            id="abLightDropFill"
+            cx="0.30"
+            cy="0.26"
+            r="0.85"
           >
-            <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
-            <stop offset="60%" stopColor="#e7efea" stopOpacity="0" />
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="60%" stopColor="#fafaf7" />
+            <stop offset="100%" stopColor="#e7efea" />
+          </radialGradient>
+          <linearGradient
+            id="abLightRidge"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="1"
+          >
+            <stop offset="0%" stopColor="#a3c0b1" />
+            <stop offset="100%" stopColor="#3f6c5e" />
+          </linearGradient>
+          <radialGradient
+            id="abLightGleam"
+            cx="0.5"
+            cy="0.5"
+            r="0.5"
+          >
+            <stop offset="0%" stopColor="#e6c98e" />
+            <stop offset="60%" stopColor="#c8a973" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="#c8a973" stopOpacity="0" />
           </radialGradient>
         </defs>
 
-        {/* Single foothill silhouette — soft Q-curve, sage on dark */}
-        <path
-          d="M2 30 Q 11 22 19 26 Q 27 30 38 23 L 38 39 L 2 39 Z"
-          fill="#7a9e8e"
-          opacity="0.55"
-        />
-        {/* Subtle highlight band along the ridge crest */}
-        <path
-          d="M2 30 Q 11 22 19 26 Q 27 30 38 23"
-          stroke="#e7efea"
-          strokeWidth="0.6"
+        {/* Outer thin seal ring — gives the mark a "stamp" quality */}
+        <circle
+          cx="22"
+          cy="22"
+          r="20.5"
           fill="none"
+          stroke="#7a9e8e"
+          strokeWidth="0.5"
           opacity="0.45"
         />
-
-        {/* Cream water drop */}
-        <path
-          d="M20 4.5 C 23.6 9.5, 26.5 13.6, 26.5 17.4 a 6.5 6.5 0 1 1 -13 0 c 0 -3.8, 2.9 -7.9, 6.5 -12.9 Z"
-          fill="#fafaf7"
+        <circle
+          cx="22"
+          cy="22"
+          r="19"
+          fill="none"
+          stroke="#e7efea"
+          strokeWidth="0.3"
+          opacity="0.18"
         />
-        {/* Soft inner highlight */}
+
+        {/* Foothill ridge — gradient sage, soft Q curve */}
         <path
-          d="M20 4.5 C 23.6 9.5, 26.5 13.6, 26.5 17.4 a 6.5 6.5 0 1 1 -13 0 c 0 -3.8, 2.9 -7.9, 6.5 -12.9 Z"
-          fill="url(#abDropInner)"
+          d="M5 31 Q 13 23 21 27 Q 29 31 39 24"
+          stroke="url(#abLightRidge)"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          fill="none"
           opacity="0.85"
         />
-        {/* Stone-warm gleam — single confident dot */}
-        <circle cx="17" cy="11.5" r="1.2" fill="#c8a973" opacity="0.92" />
+        {/* Subtle ridge highlight */}
+        <path
+          d="M5 31 Q 13 23 21 27 Q 29 31 39 24"
+          stroke="#e7efea"
+          strokeWidth="0.5"
+          strokeLinecap="round"
+          fill="none"
+          opacity="0.4"
+          transform="translate(0 -1.2)"
+        />
+
+        {/* Soft halo behind the gleam — barely-there warm glow */}
+        <circle cx="18.5" cy="13" r="3.5" fill="url(#abLightGleam)" />
+
+        {/* Cream water drop — refined silhouette */}
+        <path
+          d="M22 6.5
+             C 25.4 11, 28.5 14.8, 28.5 18.4
+             a 6.5 6.5 0 1 1 -13 0
+             c 0 -3.6, 3.1 -7.4, 6.5 -11.9 Z"
+          fill="url(#abLightDropFill)"
+        />
+
+        {/* Stone-warm gleam — confident dot */}
+        <circle cx="18.6" cy="13.2" r="1.2" fill="#c8a973" />
+        <circle cx="18.2" cy="12.8" r="0.45" fill="#fafaf7" opacity="0.75" />
       </svg>
     );
   }
@@ -77,33 +126,48 @@ export function LogoMark({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 40 40"
+      viewBox="0 0 44 44"
       role="img"
       aria-label={ariaLabel ?? "Auburn Bath emblem"}
       className={cn("inline-block shrink-0", className)}
     >
       <defs>
-        <linearGradient id="abMarkBgDark" x1="0" y1="0" x2="40" y2="40">
-          <stop offset="0%" stopColor="#fafaf7" />
+        <radialGradient id="abDarkDisc" cx="0.32" cy="0.28" r="0.85">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="60%" stopColor="#fafaf7" />
           <stop offset="100%" stopColor="#e7efea" />
+        </radialGradient>
+        <linearGradient id="abDarkRidge" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#3a6b5d" />
+          <stop offset="100%" stopColor="#23483e" />
         </linearGradient>
       </defs>
-      <circle cx="20" cy="20" r="20" fill="url(#abMarkBgDark)" />
-      <path
-        d="M5 26 L13 19 L18 23 L24 17 L31 24 L35 22 L35 30 L5 30 Z"
-        fill="#2f5d50"
-        opacity="0.78"
+      <circle cx="22" cy="22" r="22" fill="url(#abDarkDisc)" />
+      {/* Inner thin sage ring */}
+      <circle
+        cx="22"
+        cy="22"
+        r="20"
+        fill="none"
+        stroke="#7a9e8e"
+        strokeWidth="0.5"
+        opacity="0.4"
       />
       <path
-        d="M5 28.5 L12 23 L17 26 L23 21 L30 27 L35 25 L35 32 L5 32 Z"
-        fill="#7a9e8e"
-        opacity="0.6"
+        d="M5 31 Q 13 23 21 27 Q 29 31 39 24"
+        stroke="url(#abDarkRidge)"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        fill="none"
       />
       <path
-        d="M20 8.5 C 22.6 12.4, 25 15.2, 25 18 a 5 5 0 1 1 -10 0 c 0 -2.8, 2.4 -5.6, 5 -9.5 Z"
-        fill="#2f5d50"
+        d="M22 6.5
+           C 25.4 11, 28.5 14.8, 28.5 18.4
+           a 6.5 6.5 0 1 1 -13 0
+           c 0 -3.6, 3.1 -7.4, 6.5 -11.9 Z"
+        fill="#23483e"
       />
-      <circle cx="17.6" cy="13.4" r="0.95" fill="#c8a973" opacity="0.85" />
+      <circle cx="18.6" cy="13.2" r="1.05" fill="#c8a973" />
     </svg>
   );
 }
