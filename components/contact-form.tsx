@@ -1,8 +1,9 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 import { submitContact, type ContactState } from "@/app/actions";
+import { site } from "@/lib/site";
 
 const initialState: ContactState = { status: "idle", message: "" };
 
@@ -23,6 +24,17 @@ export function ContactForm({
     submitContact,
     initialState
   );
+
+  // Abandonment recovery: after the user has touched the form for
+  // ~30s without submitting, surface a quiet "talk to us instead"
+  // hint below the submit. Not a modal, not pushy — just an option.
+  const [interacted, setInteracted] = useState(false);
+  const [helpVisible, setHelpVisible] = useState(false);
+  useEffect(() => {
+    if (!interacted || pending || state.status === "success") return;
+    const t = setTimeout(() => setHelpVisible(true), 30_000);
+    return () => clearTimeout(t);
+  }, [interacted, pending, state.status]);
 
   if (state.status === "success") {
     return (
@@ -64,6 +76,7 @@ export function ContactForm({
       action={formAction}
       className="card p-6 sm:p-8 space-y-5"
       noValidate
+      onFocus={() => setInteracted(true)}
     >
       <div>
         <span className="eyebrow">Free quote</span>
@@ -176,6 +189,50 @@ export function ContactForm({
           By submitting, you agree to be contacted about your remodel project.
         </p>
       </div>
+
+      {helpVisible ? (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fade-up flex flex-col gap-3 rounded-[var(--radius-card)] border border-sage/40 bg-sage-light/60 p-4 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div className="flex items-start gap-3">
+            <span
+              aria-hidden
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest text-cream"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372a1.125 1.125 0 0 0-.964-1.113l-4.114-.62a1.125 1.125 0 0 0-1.155.564l-.928 1.546a13.514 13.514 0 0 1-6.13-6.13l1.547-.928a1.125 1.125 0 0 0 .564-1.155l-.62-4.114A1.125 1.125 0 0 0 8.872 3H7.5A4.25 4.25 0 0 0 2.25 7.25v-.5Z"
+                />
+              </svg>
+            </span>
+            <div className="min-w-0">
+              <div className="font-display text-sm font-medium text-soft-black">
+                Stuck on a field?
+              </div>
+              <div className="mt-0.5 text-xs leading-5 text-muted">
+                We can finish this over the phone in about five minutes.
+              </div>
+            </div>
+          </div>
+          <a
+            href={site.phoneHref}
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-forest/30 bg-cream px-4 py-2 text-sm font-medium text-forest hover:bg-cream/80 transition-colors"
+          >
+            Call {site.phone}
+          </a>
+        </div>
+      ) : null}
     </form>
   );
 }

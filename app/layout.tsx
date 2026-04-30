@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 
 import { DesktopFloatingCTA } from "@/components/desktop-floating-cta";
+import { ExitIntentModal } from "@/components/exit-intent-modal";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MobileStickyCTA } from "@/components/mobile-sticky-cta";
@@ -92,6 +93,7 @@ export default function RootLayout({
         <Footer />
         <MobileStickyCTA />
         <DesktopFloatingCTA />
+        <ExitIntentModal />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={jsonLdScript(localBusinessSchema())}
